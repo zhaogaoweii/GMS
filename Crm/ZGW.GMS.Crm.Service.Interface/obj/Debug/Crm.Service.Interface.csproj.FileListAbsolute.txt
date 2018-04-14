@@ -1,0 +1,13 @@
+E:\DownLoad\GMS\GMS\bin\GMS.Crm.DAL.dll
+E:\DownLoad\GMS\GMS\bin\GMS.Crm.DAL.pdb
+E:\DownLoad\GMS\GMS\Src\GMS.Crm.DAL\obj\Debug\Crm.Service.Interface.csprojResolveAssemblyReference.cache
+E:\DownLoad\GMS\GMS\Src\GMS.Crm.DAL\obj\Debug\GMS.Crm.DAL.dll
+E:\DownLoad\GMS\GMS\Src\GMS.Crm.DAL\obj\Debug\GMS.Crm.DAL.pdb
+E:\框架\GMS\bin\GMS.Crm.DAL.dll
+E:\框架\GMS\bin\GMS.Crm.DAL.pdb
+E:\框架\GMS\Src\GMS.Crm.DAL\obj\Debug\Crm.Service.Interface.csprojResolveAssemblyReference.cache
+E:\框架\GMS\Src\GMS.Crm.DAL\obj\Debug\GMS.Crm.DAL.dll
+E:\框架\GMS\Src\GMS.Crm.DAL\obj\Debug\GMS.Crm.DAL.pdb
+E:\框架\GMS\Src\Crm\Crm.Service.Interface\obj\Debug\Crm.Service.Interface.csprojResolveAssemblyReference.cache
+E:\框架\GMS\Src\Crm\Crm.Service.Interface\obj\Debug\GMS.Crm.DAL.dll
+E:\框架\GMS\Src\Crm\Crm.Service.Interface\obj\Debug\GMS.Crm.DAL.pdb

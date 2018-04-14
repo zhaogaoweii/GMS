@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CIIC.OMS.TiaoZhang.Interface</name>
+    </assembly>
+    <members>
+        <member name="T:CIIC.OMS.TiaoZhang.Interface.TzInterface">
+            <summary>
+            调账对外公开接口
+            针对调账点过滤时采用差异化规则 具体如下：
+                1、入职取消 [由于入职取消不传社保、费用等信息 在公共过滤方法中已经实现过滤规则]
+                2、算法变更 [影响的是成本与往来] 必传项为：接口主实体所有属性及算法变更开始时间。由于接口主实体没有开始时间属性 
+                因此需要加入一条虚拟社保实体并设置其开始时间为算法变更的开始时间 且社保列表有且只能有一条社保数据
+                3、模板变更 [影响的是出账月份] 必传项为：接口主实体所有属性及模板变更开始时间。由于接口主实体没有开始时间属性 
+                因此需要加入一条虚拟社保实体并设置其开始时间为模板变更的开始时间 且社保列表有且只能有一条社保数据
+            </summary>
+            <exception cref="T:System.NullReferenceException">未将对象设置到引用的实例</exception>
+            <exception cref="T:System.ArgumentException">传入的接口参数错误</exception>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhang.Interface.TzInterface.#ctor(CIIC.OMS.TiaoZhang.Logic.ITzEmpIfLogic)">
+            <summary>
+            调账接口实例化
+            </summary>
+            <param name="tzEmpIfLogical"></param>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhang.Interface.TzInterface.AddTiaoZhang(CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity)">
+            <summary>
+            根据传入的接口实体生成相应的插入SQL语句，供调账点执行
+            注意：本方法只返回SQL语句，不执行
+            </summary>
+            <param name="entity">调账接口实体</param>
+            <returns>SQL语句字典</returns>
+            <exception cref="T:System.NullReferenceException">未将对象设置到引用的实例</exception>
+            <exception cref="T:System.ArgumentException">传入的接口参数错误</exception>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhang.Interface.TzInterface.AddTiaoZhangHistory(CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity)">
+            <summary>
+            添加到调账历史接口　测试用
+            </summary>
+            <param name="entity">历史接口实体</param>
+            <returns>事物SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhang.Interface.TzInterface.BaseDataValidation(CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity)">
+            <summary>
+            接口数据基础数据校验
+            </summary>
+            <exception cref="T:System.NullReferenceException">未将对象设置到引用的实例</exception>
+            <exception cref="T:System.ArgumentException">传入的接口参数错误</exception>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhang.Interface.TzInterface.CustomDataValidation(CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity)">
+            <summary>
+            接口数据基础数据自定义校验
+            </summary>
+            <exception cref="T:System.NullReferenceException">未将对象设置到引用的实例</exception>
+            <exception cref="T:System.ArgumentException">传入的接口参数错误</exception>
+            <returns>是否插入接口表</returns>
+        </member>
+    </members>
+</doc>

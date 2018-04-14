@@ -1,0 +1,4155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CIICBJ.OMS.Robot.Entity</name>
+    </assembly>
+    <members>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity">
+            <summary>
+            公积金业务基类
+            作者：袁登明
+            日期：2014-6-18
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.Batchid">
+             <summary>
+            批次编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.Omsaccountid">
+            <summary>
+            OMS系统中单位开户编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.Omsbizid">
+             <summary>
+            业务数据编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.BizMonth">
+            <summary>
+            业务所属期（YYYYMM）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.Status">
+             <summary>
+            状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.Result">
+             <summary>
+            申报结果
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.Remark">
+             <summary>
+            备注
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.OmsUserId">
+             <summary>
+            OMS用户编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.OmsAppCode">
+             <summary>
+            OMS系统编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBaseEntity.StatusDescription">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.ValidateHelper">
+            <summary>
+            正则表达式验证类
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.ValidateHelper.CheckIDCard15(System.String)">
+            <summary>
+            验证15位身份证
+            </summary>
+            <param name="identityCard"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.XMLRequestHelper.ModelToXML(System.Xml.XmlDocument,System.Xml.XmlElement,System.String,System.Object)">
+            <summary>
+            根据实体生成明细XML
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.XMLRequestHelper.XMLToModel(System.String,System.Object)">
+            <summary>   
+            XML转化为Model的方法   
+            </summary>   
+            <param name="xml">要转化的XML</param>  
+            <param name="SampleModel">Model的实体示例，New一个出来即可</param>  
+            <returns></returns>   
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus">
+            <summary>
+            业务数据状态状态（10：未申报 20：申报过程中 21：申报结束等待结果 30：申报失败(未达到界限值),31：失败（已达到界限值）,32：失败（公积金中心反馈失败） 40：发送成功）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.UnKnown">
+            <summary>
+            未赋值
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.UnSend">
+            <summary>
+            未申报
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.Sending">
+            <summary>
+            申报过程中
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.SendedWaitForResult">
+            <summary>
+            申报结束等待结果(报增、报减、补缴、支取)
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.Fail4Tmp">
+            <summary>
+            失败(未达到界限值)
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.Fail4All">
+            <summary>
+            失败（已达到界限值）
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.Fail4FeedBack">
+            <summary>
+            失败（公积金中心反馈）
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BizItemStatus.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow">
+             <summary>
+            单位资金流水表实体
+            作者：卢钰龙
+            日期：2017/8/9
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Ywlsh">
+             <summary>
+            业务流水号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Ywlx">
+             <summary>
+            业务类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Ksrq">
+             <summary>
+            业务发生开始时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Zzrq">
+             <summary>
+            业务发生终止时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Jzrq">
+             <summary>
+            记账日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Bjfse">
+             <summary>
+            本金发生额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Lxe">
+             <summary>
+            利息额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Czybh">
+             <summary>
+            操作员编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Czyxm">
+             <summary>
+            操作员姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Cjsj">
+             <summary>
+            创建时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Sjly">
+             <summary>
+            数据来源
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Zxupdatetime">
+             <summary>
+            远程更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountBizFlow.Ywlxmc">
+             <summary>
+            业务类型
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate">
+             <summary>
+            单位账户更新表实体
+            作者：卢钰龙
+            日期：2017/8/10
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Omsaccountid">
+             <summary>
+            OMS开户编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Accountbizflowsdate">
+             <summary>
+            单位业务流水汇总成功更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Accountbizflowudate">
+             <summary>
+            单位业务流水汇总更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Accountbizflowustatus">
+             <summary>
+            单位业务流水汇总更新状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Accountbizflowuresult">
+             <summary>
+            单位业务流水汇总更新结果
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empinfosdate">
+             <summary>
+            单位职工账户成功更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empinfoudate">
+             <summary>
+            单位职工账户更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empinfoustatus">
+             <summary>
+            单位职工账户更新状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empinfouresult">
+             <summary>
+            单位职工账户更新结果
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empbizflowsdate">
+             <summary>
+            个人明细（流水）成功更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empbizflowudate">
+             <summary>
+            个人明细（流水）更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empbizflowustatus">
+             <summary>
+            个人明细（流水）更新状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Empbizflowuresult">
+             <summary>
+            个人明细（流水）更新结果
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Paymentsdate">
+             <summary>
+            汇缴清册成功更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Paymentudate">
+             <summary>
+            汇缴清册更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Paymentustatus">
+             <summary>
+            汇缴清册更新状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Paymenturesult">
+             <summary>
+            汇缴清册更新结果
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Supplysdate">
+             <summary>
+            补缴清册成功更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Supplyudate">
+             <summary>
+            补缴清册更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Supplyustatus">
+             <summary>
+            补缴清册更新状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Supplyuresult">
+             <summary>
+            补缴清册更新结果
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Adjustsdate">
+             <summary>
+            跨年清册成功更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Adjustudate">
+             <summary>
+            跨年清册更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Adjustustatus">
+             <summary>
+            跨年清册更新状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Adjusturesult">
+             <summary>
+            跨年清册更新结果
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Omsjbr">
+             <summary>
+            OMS经办人编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.JbrzjlxName">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountDate.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen">
+             <summary>
+            单位开户表实体
+            作者：卢钰龙
+            日期：2017/8/7
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Shcxdm">
+             <summary>
+            社会诚信代码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Zjly">
+             <summary>
+            资金来源
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Ejdwmcejdwmc">
+             <summary>
+            二级单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Ywjbbm">
+             <summary>
+            业务经办部门
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Lxdh">
+             <summary>
+            联系电话
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Fxrq">
+             <summary>
+            发薪日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Schjny">
+             <summary>
+            汇缴年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Knqchdyf">
+             <summary>
+            跨年清册核定月份
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Dwjcbl">
+             <summary>
+            单位缴存比例
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Grjcbl">
+             <summary>
+            个人缴存比例
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Jdms">
+             <summary>
+            精度模式
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Omsjbr">
+             <summary>
+            OMS经办人编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth">
+             <summary>
+            公积金跨年清册实体
+            作者：卢钰龙
+            日期：2017/8/10
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Hjny">
+             <summary>
+            汇缴年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Xingming">
+             <summary>
+            职工姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Bgqjcjs">
+             <summary>
+            缴存基数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Bgqdwjce">
+             <summary>
+            单位缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Bgqgrjce">
+             <summary>
+            个人缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Bgqyjce">
+             <summary>
+            月缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Grzh">
+             <summary>
+            个人账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Zxupdatetime">
+             <summary>
+            远程更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustMonth.Zjlxmc">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog">
+             <summary>
+            公积金中心调用日志实体
+            作者：卢钰龙
+            日期：2017/8/10
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Txcode">
+             <summary>
+            接口代码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Sendseqno">
+             <summary>
+            发送方请求流水号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Sendfile">
+             <summary>
+            发送方请求文件
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Sendcontent">
+             <summary>
+            发送方请求内容
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Receiveseqno">
+             <summary>
+            接收方接收流水号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Retcode">
+             <summary>
+            接收交易返回码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Txstatus">
+             <summary>
+            接收处理状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Retmessage">
+             <summary>
+            返回信息描述
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Receivedate">
+             <summary>
+            接收方日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Receivetime">
+             <summary>
+            接收方时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchLog.Recfile">
+             <summary>
+            接收方接收返回文件
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch">
+             <summary>
+            汇缴清册表(从公积金中心查询，月报表主表）实体
+            作者：卢钰龙
+            日期：2017/8/10
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Ybyf">
+             <summary>
+            月报月份
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Zxupdatetime">
+             <summary>
+            远程更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Omsjbr">
+             <summary>
+            OMS经办人编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.JbrzjlxName">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonthBatch.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth">
+             <summary>
+            补缴清册表（补缴月报主表）实体
+            作者：卢钰龙
+            日期：2017/8/10
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Ybyf">
+             <summary>
+            月报月份
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Zgxm">
+             <summary>
+            职工姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Bjqsny">
+             <summary>
+            补缴开始年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Bjzzny">
+             <summary>
+            补缴终止年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Bjlx">
+             <summary>
+            补缴类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Bjys">
+             <summary>
+            补缴月数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Bjyy">
+             <summary>
+            补缴原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Bjjs">
+             <summary>
+            补缴基数(差额补缴指差的部分,分年月)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Ybje">
+             <summary>
+            月补缴额(差额、一次性使用)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Ybjehj">
+             <summary>
+            月补缴合计(实际补缴数)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Yjcjs_a">
+             <summary>
+            差额原缴存基数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Yyjce_a">
+             <summary>
+            差额原缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Yjcjs_b">
+             <summary>
+            差额应缴存基数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Yyjce_b">
+             <summary>
+            差额应缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Zxid">
+             <summary>
+            修改标志(非空是更新已提交数据，对应接口文档中的ID)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonth.Zxupdatetime">
+             <summary>
+            远程更新时间
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.OmsWcfHelper">
+             <summary>
+            OMS WCF调用工具类
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsWcfHelper.CreateGjjRobotService">
+            <summary>
+            创建OMS调用服务接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicTool">
+            <summary>
+            公积金中心字典工具类
+            </summary> 
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicTool.GetDicItemValueByOmsKey(System.String,System.String)">
+            <summary>
+            根据OMS值获取中心值
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicTool.Dics">
+            <summary>
+            字典集合,在Global中初始化
+            key:DictCode_OmsKey
+            value:GjjZxValue
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Constants">
+            <summary>
+            系统级常量
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.Constants.DB_COMPANY_CODE">
+            <summary>
+            北京市公积金中心分配的代办公司代码
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.Constants.ZX_CODE_BEIJING">
+            <summary>
+            中心代码：北京住房公积金管理中心
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.Constants.ZX_CODE_ZHONGGONG">
+            <summary>
+            中心代码：北京住房公积金管理中心中共中央直属机关分中心
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.Constants.ZX_CODE_GUOJIA">
+            <summary>
+            中心代码：北京住房公积金管理中心中央国家机关机关分中心
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.XmlFieldAttribute">
+            <summary>
+            类属性是否是生成XML节点
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus">
+            <summary>
+            主批次（内部批次）状态（10：未申报 20：申报过程中 21：申报结束等待结果 30：申报失败(未达到界限值),31：失败（已达到界限值）,32：失败（公积金中心反馈失败） 40：发送成功）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus.UnSend">
+            <summary>
+            未申报
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus.Sending">
+            <summary>
+            申报过程中
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus.SendedWaitForResult">
+            <summary>
+            申报结束等待结果(报增、报减、补缴、支取)
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus.Fail4Tmp">
+            <summary>
+            失败(未达到界限值)
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus.Fail4All">
+            <summary>
+            失败（已达到界限值）
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus.Fail4FeedBack">
+            <summary>
+            失败（公积金中心反馈）
+            </summary>
+        </member>
+        <member name="F:CIICBJ.OMS.Robot.Entity.Gjj.BatchMainStatus.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount">
+             <summary>
+            单位开户表实体
+            作者：卢钰龙
+            日期：2017/8/4
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Shcxdm">
+             <summary>
+            社会诚信代码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Zjly">
+             <summary>
+            资金来源
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Ejdwmcejdwmc">
+             <summary>
+            二级单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Ywjbbm">
+             <summary>
+            业务经办部门
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Lxdh">
+             <summary>
+            联系电话
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Fxrq">
+             <summary>
+            发薪日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Schjny">
+             <summary>
+            汇缴年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Knqchdyf">
+             <summary>
+            跨年清册核定月份
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Dwjcbl">
+             <summary>
+            单位缴存比例
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Grjcbl">
+             <summary>
+            个人缴存比例
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Jdms">
+             <summary>
+            精度模式
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Omsjbr">
+             <summary>
+            OMS经办人
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.ZjlyName">
+             <summary>
+            资金来源
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.JdmsName">
+             <summary>
+            精度模式
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.JbrzjlxName">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd">
+             <summary>
+            跨年清册表（申报表）实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.toStringForTxt">
+            <summary>
+            转换成|分隔的字符串
+            </summary>
+            <returns>字符串</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Hjny">
+             <summary>
+            汇缴年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Xm">
+             <summary>
+            职工姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Jcjs">
+             <summary>
+            变更后缴存基数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Dwjce">
+             <summary>
+            变更后单位缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Grjce">
+             <summary>
+            变更后个人缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Hjjce">
+             <summary>
+            变更后月缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Grjcbl">
+             <summary>
+            个人缴存比例
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Dwjcbl">
+             <summary>
+            单位缴存比例
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Grzh">
+             <summary>
+            个人账号(开户空，需常更新)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd.Zjlxmc">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem">
+            <summary>
+            字典项信息
+            作者：袁登明
+            日期：2014-6-18
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.Equals(CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem,CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem)">
+            <summary>
+            比较是否相等
+            </summary> 
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.GetHashCode(CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem)">
+            <summary>
+            获取哈希代码
+            </summary> 
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.ToString">
+            <summary>
+            转换成字符串
+            </summary> 
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.DictId">
+            <summary>
+            所属字典编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.OmsDicItem">
+            <summary>
+            OMS值(同一个字典类型唯一，其它引用表中存储的是本值)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.DicItemCode">
+            <summary>
+            值(同一个字典类型唯一，其它引用表中存储的是本值)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.DicItemName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDicItem.OrderIndex">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjDict">
+            <summary>
+            字典信息
+            作者：袁登明
+            日期：2014-6-18
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDict.OmsDic">
+            <summary>
+            OMS编码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDict.DicCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDict.DicName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDict.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDict.DictItems">
+            <summary>
+            字典项列表
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDict.DictItemsString">
+            <summary>
+            字典项列表字符
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub">
+             <summary>
+            汇缴清册表(上报到公积金中心，相当于报增表+报减表)实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.toStringForTxt">
+            <summary>
+            转换成|分隔的字符串
+            </summary>
+            <returns>字符串</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Hjny">
+             <summary>
+            汇缴年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Xm">
+             <summary>
+            职工姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Jcjs">
+             <summary>
+            缴存基数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Dwjce">
+             <summary>
+            单位缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Grjce">
+             <summary>
+            个人缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Hjjce">
+             <summary>
+            月缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Bglx">
+             <summary>
+            变更类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Bgyy">
+             <summary>
+            变更原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Grzh">
+             <summary>
+            个人账号(开户空，需常更新)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Zjlxmc">
+             <summary>
+            证件类型名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment">
+             <summary>
+            汇缴清册表(从公积金中心查询，相当于缴存表)实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Dwzh">
+             <summary>
+            单位账号（机器人增加字段）
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Zgxm">
+             <summary>
+            职工姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Khrq">
+             <summary>
+            开户日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Jczt">
+             <summary>
+            缴存状态
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Jcjs">
+             <summary>
+            缴存基数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Dwyjce">
+             <summary>
+            单位缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Gryjce">
+             <summary>
+            个人缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Yjce">
+             <summary>
+            月缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Grzh">
+             <summary>
+            个人账号(开户空，需常更新)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayment.Zxupdatetime">
+             <summary>
+            远程更新时间
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth">
+             <summary>
+            汇缴清册表(从公积金中心查询，月报表主表）实体
+            作者：卢钰龙
+            日期：2017/8/10
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Ybyf">
+             <summary>
+            月报月份
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Xingming">
+             <summary>
+            职工姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Bgqjcjs">
+             <summary>
+            缴存基数
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Bgqdwjce">
+             <summary>
+            单位缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Bgqgrjce">
+             <summary>
+            个人缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Bgqyjce">
+             <summary>
+            月缴存额
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Grzh">
+             <summary>
+            个人账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Zxupdatetime">
+             <summary>
+            远程更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjPayMonth.Zjlxmc">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd">
+             <summary>
+            补缴清册表(申报表)实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.toStringForTxt">
+            <summary>
+            转换成|分隔的字符串
+            </summary>
+            <returns>字符串</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Dwzh">
+             <summary>
+            单位账号（机器人增加字段）
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjny">
+             <summary>
+            补缴年月
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Zgxm">
+             <summary>
+            职工姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjqsny">
+             <summary>
+            补缴起始年月(一次性缴款，为空)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjzzny">
+             <summary>
+            补缴终止年月(一次性缴款，为空)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjys">
+             <summary>
+            补缴月数(一次性缴款，为空)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjlx">
+             <summary>
+            补缴类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjjs">
+             <summary>
+            补缴基数(差额（分年月))
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Dwybje">
+             <summary>
+            单位月补缴额(差额使用)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Grybje">
+             <summary>
+            个人月补缴额(差额使用)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Ybje">
+             <summary>
+            月补缴额(差额、一次性使用)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Ybjehj">
+             <summary>
+            月补缴合计(实际补缴数)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjyy">
+             <summary>
+            补缴原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Zxid">
+             <summary>
+            中心ID（非空是更新已提交数据，对应接口属性为ID)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Sfsc">
+             <summary>
+            是否删除(10，删除)
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Zjlxmc">
+             <summary>
+            证件类型名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd.Bjlxmc">
+             <summary>
+            补缴类型名称
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch">
+             <summary>
+            补缴清册表（补缴月报主表）实体
+            作者：卢钰龙
+            日期：2017/8/10
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Ybyf">
+             <summary>
+            月报月份
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Zxupdatetime">
+             <summary>
+            远程更新时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Omsjbr">
+             <summary>
+            OMS经办人编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.JbrzjlxName">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyMonthBatch.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg">
+             <summary>
+            单位注册信息实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwdjh">
+             <summary>
+            单位登记证号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwxz">
+             <summary>
+            单位性质
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Shcxdm">
+             <summary>
+            社会诚信代码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwzjlx">
+             <summary>
+            单位证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwzjhm">
+             <summary>
+            单位证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwfrdbxm">
+             <summary>
+            单位法人代表或负责人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwfrdbzjlx">
+             <summary>
+            单位法人代表证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwfrdbzjhm">
+             <summary>
+            单位法人代表证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwzcdz">
+             <summary>
+            单位注册地址
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwyb">
+             <summary>
+            单位邮编
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwdz">
+             <summary>
+            单位地址
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Bgdzyb">
+             <summary>
+            办公地址邮编
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwdh">
+             <summary>
+            单位电话
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwbydhhm">
+             <summary>
+            单位备用电话号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwdzxx">
+             <summary>
+            单位电子信箱
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwclsj">
+             <summary>
+            单位成立时间
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Zczb">
+             <summary>
+            注册资本
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwcz">
+             <summary>
+            单位传真
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwsyzgx">
+             <summary>
+            单位所有制关系
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwlsgx">
+             <summary>
+            单位隶属关系
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwjjlx">
+             <summary>
+            单位经济类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwfrdbdh">
+             <summary>
+            单位法人代表电话
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwfrdbsjh">
+             <summary>
+            单位法人代表手机号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Zgbm">
+             <summary>
+            主管部门
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Zjlx">
+             <summary>
+            资金类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Xzgx">
+             <summary>
+            行政关系
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Sfjbfrzg">
+             <summary>
+            是否具备法人资格
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwysdm">
+             <summary>
+            单位预算代码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwslpzwj">
+             <summary>
+            单位设立批准文件
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Dwsshy">
+             <summary>
+            单位所属行业
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Yyzzhm">
+             <summary>
+            企业法人营业执照号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Swdjzh">
+             <summary>
+            税务登记证号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Bmysdm">
+             <summary>
+            部门预算代码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Jbhkhxkzh">
+             <summary>
+            基本户开户许可证号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg.Ssqx">
+             <summary>
+            所属区县
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg">
+             <summary>
+            单位注册信息变更实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Shcxdm">
+             <summary>
+            社会诚信代码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwyb">
+             <summary>
+            单位邮编
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwdz">
+             <summary>
+            单位地址
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Bgdzyb">
+             <summary>
+            办公地址邮编
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwdh">
+             <summary>
+            单位电话
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwbydhhm">
+             <summary>
+            单位备用电话号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwdzxx">
+             <summary>
+            单位电子信箱
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Zczb">
+             <summary>
+            注册资本
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwcz">
+             <summary>
+            单位传真
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwfrdbdh">
+             <summary>
+            单位法人代表电话
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Dwfrdbsjh">
+             <summary>
+            单位法人代表手机号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg.Zgbm">
+             <summary>
+            主管部门
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg">
+             <summary>
+            单位开户信息变更实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Dwdjh">
+             <summary>
+            单位登记号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Ywjbbm">
+             <summary>
+            业务经办部门
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Lxdh">
+             <summary>
+            联系电话
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Fxrq">
+             <summary>
+            发薪日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Dbbz">
+             <summary>
+            代办标志
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg.Omsjbr">
+             <summary>
+            OMS经办人
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo">
+             <summary>
+            缴款方式实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Dwzh">
+             <summary>
+            单位账号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Jkfs">
+             <summary>
+            缴款方式
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Jkdwmc">
+             <summary>
+            缴款单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Wtskdwzhmc">
+             <summary>
+            委托收款账户名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Wtskdwzhhm">
+             <summary>
+            委托收款账户号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Wtskdwkhh">
+             <summary>
+            委托收款开户银行
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Yhjhh">
+             <summary>
+            银行交换号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Zfxth">
+             <summary>
+            支付系统号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Wtskr">
+             <summary>
+            委托收款日
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Myhjxyqr">
+             <summary>
+            每月汇缴需要确认
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Omsjbr">
+             <summary>
+            OMS经办人编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.JbrzjlxName">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjEmpBizFlow">
+            <summary>
+            个人业务流水（公积金中心暂不提供）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain">
+            <summary>
+            公积金内部接口批次信息
+            作者：袁登明
+            日期：2015-10-25
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.OmsAccountId">
+            <summary>
+            OMS系统中单位开户编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.TxCode">
+            <summary>
+            接口代码（参见预定义接口列表，对应业务类型）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.TxExt">
+            <summary>
+            扩展属性（EXT01 域内购房提取 EXT02 无房租房提取 EXT03 退休提取  01查询 02 上报）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Dwzh">
+            <summary>
+            单位账号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.RecordNum">
+            <summary>
+            记录数
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.CurrentItemId">
+            <summary>
+            当前发送公积金中心批次编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.BizMonth">
+            <summary>
+            业务所属期（YYYYMM）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.SendNum">
+            <summary>
+            发送次数
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Result">
+            <summary>
+            最后一次申报结果描述
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Status">
+            <summary>
+            状态（10：未申报 20：申报过程中 30：申报失败(未达到界限值),31：失败（已达到界限值）,32：失败（公积金中心反馈失败） 40：发送成功）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.StatusDescription">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Dwmc">
+             <summary>
+            单位名称
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Omsjbr">
+             <summary>
+            OMS经办人编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Jbrxm">
+             <summary>
+            经办人姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Jbrzjlx">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.JbrzjlxName">
+             <summary>
+            经办人证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.Jbrzjhm">
+             <summary>
+            经办人证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.TxName">
+            <summary>
+            业务名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchMain.TxExtName">
+            <summary>
+            业务扩展名称
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService">
+            <summary>
+            公积金智能机器人接口
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.TestConnection">
+            <summary>
+            测试联通性
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddUnitReg(CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg)">
+            <summary>
+            单位登记
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.ChgUnitReg(CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg)">
+            <summary>
+            单位登记信息变更
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddAccount(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount)">
+            <summary>
+            添加开户(适用于已经在公积金中心开好户，OMS系统登记到机器人系统的情形)
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddAccountOpen(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountOpen)">
+            <summary>
+            添加开户申请
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.ChgAccount(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg)">
+            <summary>
+            开户信息变更
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddAccountPayInfo(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountPayInfo)">
+            <summary>
+            添加委托收款缴款
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.SearchAccountBizFlow(System.Int64,System.String,System.String,System.String,System.String)">
+            <summary>
+            查询业务流水汇总
+            </summary>
+            <param name="omsAccountId">开户编号（OMS）</param>
+            <param name="ywlsh">业务流水号</param>
+            <param name="ywlx">业务类型（注意提醒补充字典说明）</param>
+            <param name="ksrq">业务发生开始时间</param>
+            <param name="zzrq">业务发生终止时间</param>
+            <returns>业务流水汇总</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.GetEmpInfo(System.Int64,System.String,System.String,System.String)">
+            <summary>
+            查询职工账户信息
+            </summary>
+            <param name="omsAccountId">开户编号（OMS）</param>
+            <param name="zgxm">职工姓名</param>
+            <param name="zjlx">证件类型（注意提醒补充字典说明）</param>
+            <param name="zjhm">证件号码</param>
+            <returns></returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddDrawForHouse(CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse)">
+            <summary>
+            添加域内购房申请
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddDrawForTenants(CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants)">
+            <summary>
+            添加无房租房提取申请
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddDrawForRetire(CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire)">
+            <summary>
+            添加退休提取申请
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.SearchEmpPaying(System.Int64)">
+            <summary>
+            查询汇缴清册
+            </summary>
+            <param name="omsAccountId">开户编号（OMS）</param>
+            <returns>汇缴清册</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddEmpAdd(CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub)">
+            <summary>
+            添加报增信息
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddEmpSub(CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub)">
+            <summary>
+            添加报减信息
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.SearchEmpSupplys(System.Int64)">
+            <summary>
+            查询补缴清册
+            </summary>
+            <param name="omsAccountId">开户编号（OMS）</param>
+            <returns>补缴清册</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddEmpSupply(CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd)">
+            <summary>
+            添加补缴信息
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.IGjjRobotService.AddEmpAdjust(CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd)">
+            <summary>
+            添加调基信息（结构还可以优化）
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjResponseModel">
+            <summary>
+            内部接口调用反馈模型基类
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjResponseModel.Status">
+            <summary>
+            接收处理状态（0：接收成功 1：接收失败）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjResponseModel.Code">
+            <summary>
+            接收交易返回码(请见字典)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjResponseModel.Message">
+            <summary>
+            返回信息描述
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjResponseModel.BatchId">
+            <summary>
+            接收方内部批次编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjResponseModel.BizId">
+            <summary>
+            接收方业务数据编号
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjAccountBizFlowResponseModel">
+            <summary>
+            业务流水模型
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjAccountBizFlowResponseModel.BizFlows">
+            <summary>
+            业务流水列表
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjEmpPayingResponseModel">
+            <summary>
+            汇缴清册模型
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjEmpPayingResponseModel.EmpPayings">
+            <summary>
+            汇缴清册
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjEmpSupplyResponseModel">
+            <summary>
+            补缴清册模型
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.OmsInterface.GjjEmpSupplyResponseModel.EmpSupplys">
+            <summary>
+            补缴清册
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjUnitRegAddRequestModel">
+            <summary>
+            公积金单位登记模型(DB001)
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel">
+            <summary>
+            公积金调用市公积金中心请求模型基类
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.GetXml">
+            <summary>
+            获取公积金中心需要的XML文件信息
+            </summary>
+            <returns>XML文档</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.GetProps(CIICBJ.OMS.Core.BaseEntity)">
+            <summary>
+            获取属性值
+            </summary>
+            <returns>属性-值字典</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.BatchMainId">
+            <summary>
+            批次编号(主批次编号)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.BatchItemId">
+            <summary>
+            批次编号(批次明细编号)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.TxCode">
+            <summary>
+            接口代码（参见预定义接口列表，对应业务类型）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.TxExt">
+            <summary>
+            接口扩展（参见预定义接口列表，对应业务类型）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.SendDate">
+            <summary>
+            发送日期（格式：YYYYMMDD）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.SendTime">
+            <summary>
+            发送时间（格式：HH24MISS）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.SendSeqNo">
+            <summary>
+            发送方请求流水号（全局唯一不重复,代办公司代码+YYYYMMDd+7位顺序号）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.SendNode">
+            <summary>
+            发送方节点号（参见代办公司代码表）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.ReceiveNode">
+            <summary>
+            接收方节点号（公积金中心码,如北京中心:C11000）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.OperXm">
+            <summary>
+            操作员姓名（代办公司操作员姓名）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.PageIndex">
+            <summary>
+            当前页数 第一页从0开始
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.PageSize">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestModel.Total">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjUnitRegAddRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitReg)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjUnitRegAddRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel">
+            <summary>
+            公积金单位登记模型(DB001)
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel.SendDate">
+            <summary>
+            发送日期（格式：YYYYMMDD）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel.SendTime">
+            <summary>
+            发送时间（格式：HH24MISS）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel.SendSeqNo">
+            <summary>
+            发送方请求流水号（全局唯一不重复,代办公司代码+YYYYMMDd+7位顺序号）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel.TxCode">
+            <summary>
+            接口代码（参见预定义接口列表，对应业务类型）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel.SendNode">
+            <summary>
+            发送方节点号（参见代办公司代码表）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel.ReceiveNode">
+            <summary>
+            接收方节点号（公积金中心码,如北京中心:C11000）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.RequestHeadModel.OperXm">
+            <summary>
+            操作员姓名（代办公司操作员姓名）
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjUnitRegChgRequestModel">
+            <summary>
+            单位登记信息变更模型(DB002)
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjUnitRegChgRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjUnitRegChg)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjUnitRegChgRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountAddRequestModel">
+            <summary>
+            单位开户模型（DB003）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountAddRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountAddRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountChgRequestModel">
+            <summary>
+            单位开户信息变更模型（DB004）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountChgRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountChgRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountPayInfoRequestModel">
+            <summary>
+            缴款方式管理（委托收款缴款）模型（DB005）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountPayInfoRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccountChg)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountPayInfoRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountBizFlowRequestModel">
+            <summary>
+            业务流水汇总查询模型(DB007)
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountBizFlowRequestModel.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dwzh">单位账号</param>
+            <param name="ywlsh">业务流水号,可为空</param>
+            <param name="ywlx">业务类型，字典，可为空</param>
+            <param name="ksrq">业务发生开始时间，不能小于建立代办关系的时间</param>
+            <param name="zzrq">业务发生终止时间</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAccountBizFlowRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjEmpBizFlowRequestModel">
+            <summary>
+            个人明细查询模型(DB011)
+            （待处室确认，是否提供）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjEmpBizFlowRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjEmpBizFlow)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjEmpBizFlowRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayAddRequestModel">
+            <summary>
+            汇缴清册（报增、报减）上报/确认模型（DB012）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayAddRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount,System.Collections.Generic.IList{CIICBJ.OMS.Robot.Entity.Gjj.GjjPayAddSub},System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayAddRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayAddRequestModel.Hjny">
+            <summary>
+            汇缴年月
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayAddRequestModel.AccountEntity">
+            <summary>
+            开户实体
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayAddRequestModel.AddSubEntities">
+            <summary>
+            汇缴信息列表
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayMonthRequestModel">
+            <summary>
+            获取汇缴清册模型（DB012）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayMonthRequestModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dwzh">单位账号</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjPayMonthRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyAddRequestModel">
+            <summary>
+            补缴清册上报模型（DB013）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyAddRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount,System.Collections.Generic.IList{CIICBJ.OMS.Robot.Entity.Gjj.GjjSupplyAdd})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="accEntity">开户实体</param>
+            <param name="supplyEntities">补缴申报信息列表</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyAddRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyAddRequestModel.AccountEntity">
+            <summary>
+            开户实体
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyAddRequestModel.SupplyEntities">
+            <summary>
+            补缴申报信息列表
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustAddRequestModel">
+            <summary>
+            跨年清册上报模型（DB014）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustAddRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjAccount,System.Collections.Generic.IList{CIICBJ.OMS.Robot.Entity.Gjj.GjjAdjustAdd},System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustAddRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustAddRequestModel.Hjny">
+            <summary>
+            汇缴年月
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustAddRequestModel.AccountEntity">
+            <summary>
+            开户实体
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustAddRequestModel.AdjustEntities">
+            <summary>
+            跨年信息列表
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjEmpInfoRequestModel">
+            <summary>
+            获取单位职工账户信息模型（DB008）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjEmpInfoRequestModel.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dwzh">单位账号</param>
+            <param name="zgxm">职工姓名</param>
+            <param name="zjlx">证件类型</param>
+            <param name="zjhm">证件号码</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjEmpInfoRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.DWZH">
+            <summary>
+            单位账号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.DWDJH">
+            <summary>
+            单位登记号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.HJNY">
+            <summary>
+            汇缴年月
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.FILENAME">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.DBBZ">
+            <summary>
+            代办标志
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.JBRXM">
+            <summary>
+            经办人姓名
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.JBRZJLX">
+            <summary>
+            经办人证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.JBRZJHM">
+            <summary>
+            经办人证件号码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestPayAddSubBodyModel.ZW">
+            <summary>
+            指纹
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestSupplyAddBodyModel.DWZH">
+            <summary>
+            单位账号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestSupplyAddBodyModel.DWDJH">
+            <summary>
+            单位登记号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestSupplyAddBodyModel.FILENAME">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestSupplyAddBodyModel.DBBZ">
+            <summary>
+            代办标志
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestSupplyAddBodyModel.JBRXM">
+            <summary>
+            经办人姓名
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestSupplyAddBodyModel.JBRZJLX">
+            <summary>
+            经办人证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.RequestSupplyAddBodyModel.JBRZJHM">
+            <summary>
+            经办人证件号码
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyMonthRequestModel">
+            <summary>
+            获取补缴清册（月报）模型（DB013）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyMonthRequestModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dwzh">单位账号</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjSupplyMonthRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustMonthRequestModel">
+            <summary>
+            获取跨年清册模型（DB014）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustMonthRequestModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dwzh">单位账号</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjAdjustMonthRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjBatchNoticeRequestModel">
+            <summary>
+            批量业务通知（DB015）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjBatchNoticeRequestModel.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ywlx">业务类型</param>
+            <param name="wjmc">文件名称</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjBatchNoticeRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForHouseRequestModel">
+            <summary>
+            购房提取请求模型（DB010）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForHouseRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForHouseRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForTenantsRequestModel">
+            <summary>
+            购房提取请求模型（DB010）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForTenantsRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForTenantsRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpInfoResponseModel">
+            <summary>
+            获取单位职工账户信息模型（DB008）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel">
+            <summary>
+            公积金调用市公积金中心反馈模型基类
+            作者：袁登明
+            日期：2015-10-25
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.GetXml">
+            <summary>
+            获取公积金中心需要的XML文件信息
+            </summary>
+            <returns>XML文档</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.GetProps(CIICBJ.OMS.Core.BaseEntity)">
+            <summary>
+            获取属性值
+            </summary>
+            <returns>属性-值字典</returns>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.ParseXml``1(``0,System.String)">
+            <summary>
+            将当前的XML实体转换成对应的实体类
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.ParseXml``1(``0,System.Xml.XmlNode)">
+            <summary>
+            将当前节点实体转换成对应的实体类
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.BatchMainId">
+            <summary>
+            批次编号(主批次编号)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.BatchItemId">
+            <summary>
+            批次编号(批次明细编号)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel._ResponseXml">
+            <summary>
+            响应的XML内容
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel._ResponseXmlDocument">
+            <summary>
+            响应的XML内容
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.TxStatus">
+            <summary>
+            接收处理状态（0：接收成功 1：接收失败）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.RtnCode">
+            <summary>
+            接收交易返回码(请见字典)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.RtnMessage">
+            <summary>
+            返回信息描述
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.ReceiveDate">
+            <summary>
+            接收方日期（格式：YYYYMMDD）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.ReceiveTime">
+            <summary>
+            接收方时间（格式：HH24MISS）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.ReceiveSeqNo">
+            <summary>
+            接收方接收流水号（接收方接收流水号，公积金中心码+YYYYMMDd+7位顺序号）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.ReceiveNode">
+            <summary>
+            接收方节点编号（公积金中心代码,如北京中心:C11000）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.TxCode">
+            <summary>
+            接口代码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.SendNode">
+            <summary>
+            发送方节点号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.PageIndex">
+            <summary>
+            当前页数 第一页从0开始
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.PageSize">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.ResponseModel.Total">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpInfoResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpInfoResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpInfoResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpInfoResponseModel.Entities">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel">
+            <summary>
+            公积金调用市公积金中心反馈模型基类
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.TxStatus">
+            <summary>
+            接收处理状态（0：接收成功 1：接收失败）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.RtnCode">
+            <summary>
+            接收交易返回码(请见字典)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.RtnMessage">
+            <summary>
+            返回信息描述
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.ReceiveDate">
+            <summary>
+            接收方日期（格式：YYYYMMDD）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.ReceiveTime">
+            <summary>
+            接收方时间（格式：HH24MISS）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.ReceiveSeqNo">
+            <summary>
+            接收方接收流水号（接收方接收流水号，公积金中心码+YYYYMMDd+7位顺序号）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.ReceiveNode">
+            <summary>
+            接收方节点编号（公积金中心代码,如北京中心:C11000）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.TxCode">
+            <summary>
+            接口代码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjResponseModel.SendNode">
+            <summary>
+            发送方节点号
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem">
+            <summary>
+            公积金调用市公积金中心接口批次信息
+            作者：袁登明
+            日期：2015-10-25
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.BatchId">
+            <summary>
+            内部（主）接口批次编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.TxCode">
+            <summary>
+            接口代码（参见预定义接口列表，对应业务类型）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.SendDate">
+            <summary>
+            发送日期（格式：YYYYMMDD）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.SendTime">
+            <summary>
+            发送时间（格式：HH24MISS）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.SendSeqNo">
+            <summary>
+            发送方请求流水号（全局唯一不重复,代办公司代码+YYYYMMDd+7位顺序号）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.SendNode">
+            <summary>
+            发送方节点号（参见代办公司代码表）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.ReceiveNode">
+            <summary>
+            接收方节点号（公积金中心码,如北京中心:C11000）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.OperXm">
+            <summary>
+            操作员姓名（代办公司操作员姓名）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.TxStatus">
+            <summary>
+            接收处理状态（0：接收成功 1：接收失败）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.RetCode">
+            <summary>
+            接收交易返回码(请见字典)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.RetMessage">
+            <summary>
+            返回信息描述
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.ReceiveDate">
+            <summary>
+            接收方日期（格式：YYYYMMDD）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.ReceiveTime">
+            <summary>
+            接收方时间（格式：HH24MISS）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.ReceiveSeqNo">
+            <summary>
+            接收方接收流水号（接收方接收流水号，公积金中心码+YYYYMMDd+7位顺序号）
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.OmsAccountId">
+            <summary>
+            OMS系统中单位开户编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.Dwmc">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.TxName">
+            <summary>
+            业务名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.Dwzh">
+            <summary>
+            单位账号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjBatchItem.BizMonth">
+            <summary>
+            业务所属期（YYYYMM）
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic">
+            <summary>
+            字典信息
+            作者：袁登明
+            日期：2014-6-18
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.Equals(CIICBJ.OMS.Robot.Entity.Gjj.GjjDic,CIICBJ.OMS.Robot.Entity.Gjj.GjjDic)">
+            <summary>
+            比较是否相等
+            </summary> 
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.GetHashCode(CIICBJ.OMS.Robot.Entity.Gjj.GjjDic)">
+            <summary>
+            获取哈希代码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.OmsDic">
+            <summary>
+            OMS字典编码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.DicCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.DicName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.OmsDicItem">
+            <summary>
+            OMS字典项值
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.DicItemCode">
+            <summary>
+            字典项值
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.DicItemName">
+            <summary>
+            字典项名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDic.OrderIndex">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjOperator">
+            <summary>
+            操作员信息
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjOperator.OmsId">
+            <summary>
+            OMS操作人员编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjOperator.ZxId">
+            <summary>
+            公积金中心操作人员编号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjOperator.IdCardType">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjOperator.IdCardNo">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjOperator.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjOperator.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse">
+             <summary>
+            域内提取事项申请实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Tqsxyy">
+             <summary>
+            提取事项原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Xm">
+             <summary>
+            姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Hyzk">
+             <summary>
+            婚姻状况
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Poxm">
+             <summary>
+            配偶姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Pozjlx">
+             <summary>
+            配偶证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Pozjhm">
+             <summary>
+            配偶证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Skryh">
+             <summary>
+            联名卡开户银行
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Skryhkh">
+             <summary>
+            联名卡卡号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Fwlb">
+             <summary>
+            房屋类别
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Fwcmr">
+             <summary>
+            房屋出卖人
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Wqhth">
+             <summary>
+            网签合同号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Wqcxmm">
+             <summary>
+            网签查询密码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Cqzh">
+             <summary>
+            产权证号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Jzmj">
+             <summary>
+            房屋面积
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Fwdz">
+             <summary>
+            房屋地址
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Gfje">
+             <summary>
+            购房总价
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Czyxm">
+             <summary>
+            操作员姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Czybh">
+             <summary>
+            操作员编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Dwzh">
+            <summary>
+            单位账号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Dwdjh">
+            <summary>
+            单位登记号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Dwmc">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Pozjlxmc">
+            <summary>
+            配偶证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Zjlxmc">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Hyzkmc">
+            <summary>
+            婚姻状况
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Fwlbmc">
+            <summary>
+            房屋类别
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Skryhmc">
+            <summary>
+            联名卡开户行
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForHouse.Tqsxyymc">
+             <summary>
+            提取事项原因
+             </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants">
+             <summary>
+            无房租房提取事项申请表实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Tqsxyy">
+             <summary>
+            提取事项原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Xm">
+             <summary>
+            姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Hyzk">
+             <summary>
+            婚姻状况
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Sjh">
+             <summary>
+            手机号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Poxm">
+             <summary>
+            配偶姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Pozjlx">
+             <summary>
+            配偶证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Pozjhm">
+             <summary>
+            配偶证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Skryh">
+             <summary>
+            联名卡开户银行
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Skryhkh">
+             <summary>
+            联名卡卡号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Fwdz">
+             <summary>
+            房屋地址
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Zflx">
+             <summary>
+            租房类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Sfgx">
+             <summary>
+            是否共享
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Zlkssj">
+             <summary>
+            租赁开始日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Zljzsj">
+             <summary>
+            租赁截止日期
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Fzzc">
+             <summary>
+            房租支出
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Czyxm">
+             <summary>
+            操作员姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Czybh">
+             <summary>
+            操作员编号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Dwzh">
+            <summary>
+            单位账号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Dwdjh">
+            <summary>
+            单位登记号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Dwmc">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Pozjlxmc">
+            <summary>
+            配偶证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Zjlxmc">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Hyzkmc">
+            <summary>
+            婚姻状况
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Skryhmc">
+            <summary>
+            联名卡开户行
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Tqsxyymc">
+             <summary>
+            提取事项原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForTenants.Zflbmc">
+            <summary>
+            租房类型
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire">
+             <summary>
+            退休提取申请表实体
+            作者：卢钰龙
+            日期：2017/7/28
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Tqsxyy">
+             <summary>
+            提取事项原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Xm">
+             <summary>
+            姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Zjlx">
+             <summary>
+            证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Zjhm">
+             <summary>
+            证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Hyzk">
+             <summary>
+            婚姻状况
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Poxm">
+             <summary>
+            配偶姓名
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Pozjlx">
+             <summary>
+            配偶证件类型
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Pozjhm">
+             <summary>
+            配偶证件号码
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Skryh">
+             <summary>
+            联名卡开户银行
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Skryhkh">
+             <summary>
+            联名卡卡号
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Dwzh">
+            <summary>
+            单位账号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Dwdjh">
+            <summary>
+            单位登记号
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Dwmc">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Pozjlxmc">
+            <summary>
+            配偶证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Zjlxmc">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Hyzkmc">
+            <summary>
+            婚姻状况
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Tqsxyymc">
+             <summary>
+            提取事项原因
+             </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire.Skryhmc">
+            <summary>
+            联名卡开户行
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountBizFlowResponseModel">
+            <summary>
+            获取业务流水汇总响应模型（DB007）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountBizFlowResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountBizFlowResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountBizFlowResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountBizFlowResponseModel.Entities">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayMonthResponseModel">
+            <summary>
+            获取汇缴清册（月报）模型（DB012）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayMonthResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayMonthResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayMonthResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayMonthResponseModel.Entities">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyMonthResponseModel">
+            <summary>
+            获取补缴清册（月报）模型（DB013）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyMonthResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyMonthResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyMonthResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyMonthResponseModel.Entities">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustMonthResponseModel">
+            <summary>
+            获取跨年清册（月报）模型（DB014）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustMonthResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustMonthResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustMonthResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustMonthResponseModel.Entities">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyAddResponseModel">
+            <summary>
+            上报确认补缴清册模型（DB013）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyAddResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyAddResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyAddResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyAddResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjSupplyAddResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjBatchNoticeResponseModel">
+            <summary>
+            批量业务通知响应模型（DB015）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjBatchNoticeResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjBatchNoticeResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjBatchNoticeResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjBatchNoticeResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjBatchNoticeResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountAddResponseModel">
+            <summary>
+            单位开户响应模型（DB003）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountAddResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountAddResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountAddResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountAddResponseModel.DWZH">
+            <summary>
+            单位账号(成功后才返回)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountAddResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountAddResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountChgResponseModel">
+            <summary>
+            单位开户信息变更响应模型（DB004）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountChgResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountChgResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountChgResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountChgResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountChgResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountPayInfoResponseModel">
+            <summary>
+            缴款方式管理（委托收款缴款）响应模型（DB005）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountPayInfoResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountPayInfoResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountPayInfoResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountPayInfoResponseModel.TSXXBH">
+            <summary>
+            托收协议编号(成功后才返回)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountPayInfoResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAccountPayInfoResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegAddResponseModel">
+            <summary>
+            单位登记信息登记响应模型（DB001）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegAddResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegAddResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegAddResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegAddResponseModel.particular_info">
+            <summary>
+            附加消息码(100000（成功))
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegAddResponseModel.Dwdjh">
+            <summary>
+            单位登记号(成功后才返回单位登记号)
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegChgResponseModel">
+            <summary>
+            单位登记信息变更响应模型（DB002）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegChgResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegChgResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegChgResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjUnitRegChgResponseModel.particular_info">
+            <summary>
+            附加消息码(100000（成功))
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustAddResponseModel">
+            <summary>
+            上报确认跨年清册模型（DB014）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustAddResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustAddResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustAddResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustAddResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjAdjustAddResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpBizFlowResponseModel">
+            <summary>
+            获取个人业务流水汇总响应模型（DB011）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpBizFlowResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpBizFlowResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpBizFlowResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjEmpBizFlowResponseModel.Entities">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjDrawResponseModel">
+            <summary>
+            提取类操作响应模型（DB010）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjDrawResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjDrawResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjDrawResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjDrawResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjDrawResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayAddResponseModel">
+            <summary>
+            上报确认汇缴清册响应模型（DB012）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayAddResponseModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayAddResponseModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayAddResponseModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayAddResponseModel.FHZ">
+            <summary>
+            返回值(0000：成功、非0000：失败)
+            </summary>
+        </member>
+        <member name="P:CIICBJ.OMS.Robot.Entity.Gjj.Response2Gov.GjjPayAddResponseModel.FHXX">
+            <summary>
+            返回信息(校验结果在报文头head中(particular_code+particular_info)返回，通过返回"0000"+"",不通过"错误码"+"错误原因")
+            </summary>
+        </member>
+        <member name="T:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForRetireRequestModel">
+            <summary>
+            退休提取请求模型（DB010）
+            作者：袁登明
+            日期：2017-7-26
+            </summary>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForRetireRequestModel.#ctor(CIICBJ.OMS.Robot.Entity.Gjj.GjjDrawForRetire)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">业务实体</param>
+        </member>
+        <member name="M:CIICBJ.OMS.Robot.Entity.Gjj.Request2Gov.GjjDrawForRetireRequestModel.ToXmlBodyNode(System.Xml.XmlNode)">
+            <summary>
+            将当前实体转换成XML格式的内容节点
+            </summary>
+            <param name="bodyNode">处理前的XML内容节点</param>
+            <returns>处理后的XML内容节点</returns>
+        </member>
+    </members>
+</doc>

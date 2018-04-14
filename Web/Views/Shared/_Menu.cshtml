@@ -1,0 +1,99 @@
+﻿@using ZGW.GMS.Core.Config
+@{
+    var adminMenuConfig = CachedConfigContext.Current.AdminMenuConfig;
+            //var permissions = AdminUserContext.Current.LoginInfo.BusinessPermissionList.Select(p=>p.ToString());
+}
+<div class="page-sidebar nav-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul>
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone">
+                <h3 style="margin-left: -160px; line-height: 23px; color: #666;">功能菜单</h3>
+            </div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+        <li>
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+            <form class="sidebar-search dn">
+                <div class="input-box">
+                    <a href="javascript:;" class="remove"></a>
+                    <input type="text" placeholder="Search..." />
+                    <input type="button" class="submit" value=" " />
+                </div>
+            </form>
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+        </li>
+        @foreach (var group in adminMenuConfig.AdminMenuGroups)
+        {
+@* //if (!string.IsNullOrEmpty(group.Permission) && !permissions.Contains(group.Permission))
+            //{
+            //    continue;
+            //}
+
+            var menus = group.AdminMenuArray.Where(m => string.IsNullOrEmpty(m.Permission)); //|| permissions.Contains(m.Permission));
+            var hasSub = menus.Count() > 0;
+
+            if (!hasSub && string.IsNullOrEmpty(group.Url))
+            {
+                continue;
+            }
+            
+            <li class="@(hasSub?"has-sub":string.Empty)">
+			    <a href="@(hasSub ? "javascript:;" : group.Url)" title="@group.Info">
+			    <i class="@group.Icon"></i> 
+			    <span class="title">@group.Name</span>
+                @if (hasSub)
+                {
+                    <span class='arrow'></span>
+                }
+			    </a>
+                @if (hasSub)
+                {
+                    <ul class="sub">
+                    @foreach (var menu in menus)
+                    {
+				        <li ><a href="@menu.Url" title="@menu.Info">@menu.Name</a></li>
+                    }
+                    </ul>
+                }
+		    </li>*@
+        
+            var menus = group.AdminMenuArray.Where(m => string.IsNullOrEmpty(m.Permission)); //|| permissions.Contains(m.Permission));
+
+
+            
+            <li class="has-sub">
+                <a href="@group.Url" title="@group.Info">
+                    <i class="@group.Icon"></i>
+                    <span class="title">@group.Name</span>
+
+                    <span class='arrow'></span>
+
+                </a>
+
+                <ul class="sub">
+                    @*@foreach (var menu in menus)
+                    {
+                        <li><a href="@menu.Url" title="@menu.Info">@menu.Name</a></li>
+                    }*@
+                    @foreach (var menu in group.AdminMenuArray)
+                    {
+@* <li><a href="@menu.Url">@menu.Name </a></li>*@
+                        <li><a href="javascript::" onclick="ToModule('@menu.Url');return false">@menu.Name </a></li>
+                    }
+                </ul>
+
+            </li>
+        }
+
+
+    </ul>
+    <!-- END SIDEBAR MENU -->
+</div>
+<script type="text/javascript">
+
+    function ToModule(url) {
+        window.location.href = "@Url.Content("~/")" + url;
+    }
+</script>

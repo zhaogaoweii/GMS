@@ -1,0 +1,2171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CIIC.OMS.TiaoZhang.BusinessEntity</name>
+    </assembly>
+    <members>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity">
+            <summary>
+            产品服务实体类
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.HireId">
+            <summary>
+            雇佣关联ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.ServiceFeeBeginDate">
+            <summary>
+            服务费开始时间
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.FirstMonthFee">
+            <summary>
+            首月收费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.ServiceFeeEndDate">
+            <summary>
+            服务费结束时间
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.LastMonthFee">
+            <summary>
+            末月收费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.ServiceCaseProdPrice">
+            <summary>
+            服务方案产品费用
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.DictServiceProductId">
+            <summary>
+            产品编号
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.ServiceCaseProdId">
+            <summary>
+            服务方案编号
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TbDictServiceEntity.DictServiceProductCategory">
+            <summary>
+            服务产品类型
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity">
+            <summary>
+            社保计算实体
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.TzEmpBaseCalcId">
+            <summary>
+            雇员调账社保费计算ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.TiaozhangCaclId">
+            <summary>
+            调账计算ID（对应计算表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.TiaozhangId">
+            <summary>
+            调账接口ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.HireId">
+            <summary>
+            雇佣ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.FeeMonth">
+            <summary>
+            费用月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OutDate">
+            <summary>
+            应出帐月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.ShebaoVerId">
+            <summary>
+            社保版本ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjVerId">
+            <summary>
+            公积金版本ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsYlao">
+            <summary>
+            是否养老
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoComBase">
+            <summary>
+            养老企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoPersonBase">
+            <summary>
+            养老个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoComRate">
+            <summary>
+            养老企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoPersonRate">
+            <summary>
+            养老个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoComFee">
+            <summary>
+            养老企业部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoPersonFee">
+            <summary>
+            养老个人部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoTotal">
+            <summary>
+            养老小计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsSye">
+            <summary>
+            是否失业
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyeComBase">
+            <summary>
+            失业企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyePersonBase">
+            <summary>
+            失业个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyeComRate">
+            <summary>
+            失业企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyePersonRate">
+            <summary>
+            失业个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyeComFee">
+            <summary>
+            失业企业部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyePersonFee">
+            <summary>
+            失业个人部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyeTotal">
+            <summary>
+            失业小计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsGs">
+            <summary>
+            是否工伤
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsComBase">
+            <summary>
+            工伤企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsPersonBase">
+            <summary>
+            工伤个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsComRate">
+            <summary>
+            工伤企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsPersonRate">
+            <summary>
+            工伤个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsComFee">
+            <summary>
+            工伤企业部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsPersonFee">
+            <summary>
+            工伤个人部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsTotal">
+            <summary>
+            工伤小计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsSyu">
+            <summary>
+            是否生育
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuComBase">
+            <summary>
+            生育企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuPersonBase">
+            <summary>
+            生育个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuComRate">
+            <summary>
+            生育企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuPersonRate">
+            <summary>
+            生育个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuComFee">
+            <summary>
+            生育企业部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuPersonFee">
+            <summary>
+            生育个人部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuTotal">
+            <summary>
+            生育小计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsYliao">
+            <summary>
+            是否医疗
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoComBase">
+            <summary>
+            医疗企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoPersonBase">
+            <summary>
+            医疗个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoComRate">
+            <summary>
+            医疗企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoPersonRate">
+            <summary>
+            医疗个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoComFee">
+            <summary>
+            医疗企业部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoPersonFee">
+            <summary>
+            医疗个人部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoTotal">
+            <summary>
+            医疗小计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsGjj">
+            <summary>
+            是否公积金
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjComBase">
+            <summary>
+            公积金企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjPersonBase">
+            <summary>
+            公积金个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjComRate">
+            <summary>
+            公积金企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjPersonRate">
+            <summary>
+            公积金个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjComFee">
+            <summary>
+            公积金缴存额企业部分
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjPersonFee">
+            <summary>
+            公积金缴存额个人部分
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjTotal">
+            <summary>
+            公积金缴存额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsBcGjj">
+            <summary>
+            是否补充公积金
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.BcGjjComBase">
+            <summary>
+            补充公积金企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.BcGjjPersonBase">
+            <summary>
+            补充公积金个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.BcGjjComRate">
+            <summary>
+            补充公积金企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.BcGjjPersonRate">
+            <summary>
+            补充公积金个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.BcGjjComFee">
+            <summary>
+            补充公积金企业缴存额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.BcGjjPersonFee">
+            <summary>
+            补充公积金个人缴存额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.BcGjjTotal">
+            <summary>
+            补充公积金缴存额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.IsOther">
+            <summary>
+            是否其他险种
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherComBase">
+            <summary>
+            其他险种企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherPersonBase">
+            <summary>
+            其他险种个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherComRate">
+            <summary>
+            其他险种企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherPersonRate">
+            <summary>
+            其他险种个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherComFee">
+            <summary>
+            其他险种存额企业部分
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherPersonFee">
+            <summary>
+            其他险种缴存额个人部分
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherTotal">
+            <summary>
+            其他险种缴存额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.ShebaoComTotal">
+            <summary>
+            五险一金企业合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.ShebaoPersonTotal">
+            <summary>
+            五险一金个人合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SixianComTotal">
+            <summary>
+            四险企业合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SixianPersonTotal">
+            <summary>
+            四险个人合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.WuxianComTotal">
+            <summary>
+            五险企业合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.WuxianPersonTotal">
+            <summary>
+            五险个人合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SixianTotal">
+            <summary>
+            四险合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.WuxianTotal">
+            <summary>
+            五险合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.ShebaoTotal">
+            <summary>
+            五险一金合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YlaoAdjustEvent">
+            <summary>
+            养老调整事件
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyeAdjustEvent">
+            <summary>
+            失业调整事件
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GsAdjustEvent">
+            <summary>
+            工伤调整事件
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.SyuAdjustEvent">
+            <summary>
+            生育调整事件
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.YliaoAdjustEvent">
+            <summary>
+            医疗调整事件
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjAdjustEvent">
+             <summary>
+            公积金调整事件
+             </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.GjjBuAdjustEvent">
+            <summary>
+            补充公积金调整事件
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.OtherAdjustEvent">
+            <summary>
+            其它调整事件
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.CurrentFee">
+            <summary>
+            往来费用总计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.CostFee">
+            <summary>
+            成本费用总计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseCalcEntity.TzEmpBaseCalcDetails">
+            <summary>
+            调账社保计算明细
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity">
+            <summary>
+            社保计算详细
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.TzEmpBaseDetailCaclId">
+            <summary>
+            调整明细账计算ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.TzEmpBaseCalcId">
+            <summary>
+            雇员调账社保费计算ID（对应计算表社保主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.TiaozhangCaclId">
+            <summary>
+            调账计算ID（对应计算表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.TiaozhangId">
+            <summary>
+            调账接口ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.DicChargesId">
+            <summary>
+            服务项目ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.FeeMonth">
+            <summary>
+            费用月份:每月的第一天
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.OutDate">
+            <summary>
+            应出帐月份:每月的第一天
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.ServiceFee">
+            <summary>
+            费用金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.ShebaoVerId">
+            <summary>
+            社保版本
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseDetailCalcEntity.InsuranceType">
+            <summary>
+            原始险种类型
+            <para>
+            扩展属性
+            </para>
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity">
+            <summary>
+            调账计算表实体
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.TzEmpBaseCalc">
+            <summary>
+            社保计算实体
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.TzEmpFeeCalc">
+            <summary>
+            服务费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.TiaoZhangCalcId">
+            <summary>
+            雇员调账计算ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.TiaoZhangId">
+            <summary>
+            调账接口ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.HireId">
+            <summary>
+            雇员ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.IsCycFee">
+            <summary>
+            是否周期费用
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.BillheadNum">
+            <summary>
+            出账周期数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.FeeMonth">
+            <summary>
+            费用月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.OutAccountMonth">
+            <summary>
+            应出账月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.CityId">
+            <summary>
+            服务执行城市 ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.IsSheBaoFee">
+            <summary>
+            是否社保费用
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.IsServiceFee">
+            <summary>
+            是否服务费用
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.TiaoZhangType">
+            <summary>
+            调账类型
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.FeeSourceId">
+            <summary>
+            费用来源ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.BillheadTpId">
+            <summary>
+            付款通知单模板
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.AlgorithmId">
+            <summary>
+            算法定义ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.ShebaoTotal">
+            <summary>
+            社保合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.ShebaoComTotal">
+            <summary>
+            社保企业合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.ShebaoPersonTotal">
+            <summary>
+            社保个人合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.ExtendTax">
+            <summary>
+            营业税金
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.RiskFee">
+            <summary>
+            风险金
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.ServriceTotal">
+            <summary>
+            服务费用
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.FeeTotal">
+            <summary>
+            费用总计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.IfOutAccount">
+            <summary>
+            是否出账
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.IsAdd">
+            <summary>
+            是否添加
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpCaclEntity.IsChange">
+            <summary>
+            是否变化
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity">
+            <summary>
+            费用计算实体
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.TzEmpFeeCalcId">
+            <summary>
+            雇员调账费用计算ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.TiaozhangCaclId">
+            <summary>
+            调账计算ID（对应计算表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.TiaozhangId">
+            <summary>
+            调账接口ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.HireId">
+            <summary>
+            雇佣ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.FeeMonth">
+            <summary>
+            费用月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.OutDate">
+            <summary>
+            出账月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.FeeSourceId">
+            <summary>
+            费用来源ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustArchiveFee">
+            <summary>
+            是否调整存档费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustShebaoServiceFee">
+            <summary>
+            是否调整五险一金代办费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustSalaryServiceFee">
+            <summary>
+            是否调整代发工资服务费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustServiceCaseTax">
+            <summary>
+            是否调整附件二已列明税金
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustHrServiceFee">
+            <summary>
+            是否调整人事服务费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustBcylFee">
+            <summary>
+            是否调整补充医疗费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustInsuranceFee">
+            <summary>
+            是否调整商业保险费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustWelfareFee">
+            <summary>
+            是否调整补充福利费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustExpensiveFee">
+            <summary>
+            是否调整报销福利费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustMedicalServices">
+            <summary>
+            是否调整体检服务
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.IsAdjustSpecialServices">
+            <summary>
+            是否调整专项费用
+            2013-8-7
+            袁登明
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.HrServiceFee">
+            <summary>
+            人事服务费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.ArchiveFee">
+            <summary>
+            存档费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.ShebaoServiceFee">
+            <summary>
+            五险一金代办费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.BcylFee">
+            <summary>
+            补充医疗费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.WelfareFee">
+            <summary>
+            补充福利费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.InsuranceFee">
+            <summary>
+            商业保险费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.ExpensiveFee">
+            <summary>
+            报销福利费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.MedicalServices">
+            <summary>
+            体检服务
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.SalaryServiceFee">
+            <summary>
+            代发工资服务费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.ServiceCaseTax">
+            <summary>
+            附件二已列明税金
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.SpecialFee">
+            <summary>
+            专项费用
+            2013-8-7
+            唐鑫
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.TotalFee">
+            <summary>
+            服务费合计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeCalcEntity.TzEmpFeeCalcDetails">
+            <summary>
+            服务费明细
+            </summary> 
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity">
+            <summary>
+            费用计算详细实体
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.TzEmpFeeDetailCaclId">
+            <summary>
+            雇员调账服务费明细ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.TzEmpFeeCalcId">
+            <summary>
+            雇员调账服务费计算ID（对应计算表社保主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.TiaozhangCaclId">
+            <summary>
+            调账计算ID（对应计算表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.TiaoZhangId">
+            <summary>
+            调账接口ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.FeeMonth">
+            <summary>
+            费用月份:每月的第一天
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.OutDate">
+            <summary>
+            应出账月份:每月的第一天
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.PrdId">
+            <summary>
+            服务产品ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.PrdFee">
+            <summary>
+            服务产品金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.DicChargesId">
+            <summary>
+            服务项目ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeDetailCalcEntity.CombinationProductID">
+            <summary>
+            是否是组合产品（默认为0 1：是 0：不是）
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp">
+            <summary>
+            调账中间实体
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.TZEmpID">
+            <summary>
+            雇员调账中间ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.TiaoZhangId">
+            <summary>
+            调账接口ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.HireId">
+            <summary>
+            雇佣ID(FK)
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.CityId">
+            <summary>
+            服务执行城市ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.IsShebaoFee">
+            <summary>
+            是否社保费用
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.IsServiceFee">
+            <summary>
+            是否服务费
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.TiaozhangType">
+            <summary>
+            调账类型
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.SourceId">
+            <summary>
+            费用来源ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.AlgorithmId">
+            <summary>
+            算法定义ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.BillHeadTPId">
+            <summary>
+            付款通知单模版ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.BillHeaderNum">
+            <summary>
+            出账周期数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.OutAccountMonth">
+            <summary>
+            应出账月份标准
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.IsAdd">
+            <summary>
+            是否新增雇员
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.IsCycFee">
+            <summary>
+            是否周期费用
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmp.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TZType">
+            <summary>
+            调账类型
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.Cycle">
+            <summary>
+            周期帐
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.EmployeeAdd">
+            <summary>
+            员工入职
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.EmployeeAddCancel">
+            <summary>
+            取消入职
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBaoZeng">
+            <summary>
+            社保报增
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBaoZengBack">
+            <summary>
+            报增退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBaoZengCancel">
+            <summary>
+            社保报增取消
+            </summary>
+            <remarks>
+            2014-06-06 根据会议纪要20140604 增加本地任务单取消调账点
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBaoZeng">
+            <summary>
+            医疗报增
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBaoZengBack">
+            <summary>
+            医疗报增退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBaoZengCancel">
+            <summary>
+            医疗报增取消
+            </summary>
+            <remarks>
+            2014-06-06 根据会议纪要20140604 增加本地任务单取消调账点
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBaoZeng">
+            <summary>
+            公积金报增
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBaoZengBack">
+            <summary>
+            公积金报增退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GjjBaoZengCancel">
+            <summary>
+            公积金报增取消
+            </summary>
+            <remarks>
+            2014-06-06 根据会议纪要20140604 增加本地任务单取消调账点
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendNew">
+            <summary>
+            发送新增单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendNewBack">
+            <summary>
+            退回新增单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackNew">
+            <summary>
+            反馈新增单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackNewUpdate">
+            <summary>
+            修改新增单反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoZeng">
+            <summary>
+            补充医疗报增
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoZengBack">
+            <summary>
+            补充医疗报增退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BcYliaoBaoZengCancel">
+            <summary>
+            补充医疗报增
+            </summary>
+            <remarks>
+            2014-06-06 根据会议纪要20140604 增加本地任务单取消调账点
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoZeng">
+            <summary>
+            商业保险报增
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoZengBack">
+            <summary>
+            商业保险报增退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoZengCancel">
+            <summary>
+            商业保险报增退回
+            </summary>
+            <remarks>
+            2014-06-06 根据会议纪要20140604 增加本地任务单取消调账点
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.DKHJieHu">
+            <summary>
+            单开户接户
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GjjBaoZengUpdate">
+            <summary>
+            公积金报增反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GjjBaoZengUpdateBack">
+            <summary>
+            公积金报增反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.ShebaoBaoZengUpdate">
+            <summary>
+            社保报增反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.ShebaoBaoZengUpdateBack">
+            <summary>
+            社保报增反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YliaoBaoZengUpdate">
+            <summary>
+            医疗报增反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YliaoBaoZengUpdateBack">
+            <summary>
+            医疗报增反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoZengUpdate">
+            <summary>
+            补充医疗报增反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoZengUpdateBack">
+            <summary>
+            补充医疗报增反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoZengUpdate">
+            <summary>
+            商业保险报增反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoZengUpdateBack">
+            <summary>
+            商业保险报增反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.AdjustUpdate">
+            <summary>
+            前道调基更新收费
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.AdjustApplay">
+            <summary>
+            后道调基应用
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.AlgorithmChange">
+            <summary>
+            算法定义变更
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.ServiceCaseChange">
+            <summary>
+            服务方案变更
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BillHeaderChange">
+            <summary>
+            付款通知单模板变更
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendChange">
+            <summary>
+            发送变更单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendChangeBack">
+            <summary>
+            退回变更
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackChange">
+            <summary>
+            反馈变更单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackChangeUpdate">
+            <summary>
+            修改反馈变更单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendOnce">
+            <summary>
+            发送一次性委托单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendOnceBack">
+            <summary>
+            退回一次性委托单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackOnce">
+            <summary>
+            反馈一次性委托单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackOnceUpdate">
+            <summary>
+            修改一次性委托单反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTLockBill">
+            <summary>
+            外地账单锁定
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpOnceFeeAdd">
+            <summary>
+            外地雇员一次性费用
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpOnceFeeAddCancle">
+            <summary>
+            外地雇员一次性费用退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTCustFeeAdd">
+            <summary>
+            外地客户自定义费用
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTCustFeeAddCancel">
+            <summary>
+            外地客户自定义费用退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoOnceBuJiao">
+            <summary>
+            社保一次性补缴
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoOnceBuJiaoCancel">
+            <summary>
+            社保一次性补缴退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoOnceBuJiaoUpdate">
+            <summary>
+            社保一次性补缴反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoOnceBuJiaoUpdateBack">
+            <summary>
+            社保一次性补缴反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoOnceBujiao">
+            <summary>
+            医疗一次补缴
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoOnceBujiaoCancel">
+            <summary>
+            医疗一次补缴退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoOnceBujiaoUpdate">
+            <summary>
+            医疗一次补缴反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoOnceBujiaoUpdateBack">
+            <summary>
+            医疗一次补缴反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJOnceBuJiao">
+            <summary>
+            公积金一次性补缴
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJOnceBuJiaoCancel">
+            <summary>
+            公积金一次性补缴 退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJOnceBuJiaoUpdate">
+            <summary>
+            公积金一次性补缴反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJOnceBuJiaoUpdateBack">
+            <summary>
+            公积金一次性补缴退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuChaAdd">
+            <summary>
+            添加补差
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuChaAddCancel">
+            <summary>
+            添加补差退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuChaAddUpdate">
+            <summary>
+            添加补差反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuChaAddUpdateBack">
+            <summary>
+            添加补差反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuJiaoAdd">
+            <summary>
+            添加合同外补缴
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuJiaoAddCancel">
+            <summary>
+            添加合同外补缴退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuJiaoAddUpdate">
+            <summary>
+            添加合同外补缴反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTEmpBuJiaoAddUpdateBack">
+            <summary>
+            添加合同外补缴反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoReport">
+            <summary>
+            生成社保月报
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoReportUpdate">
+            <summary>
+            生成社保月报反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoReport">
+            <summary>
+            生成医疗月报
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoReportUpdate">
+            <summary>
+            生成医疗月报反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJReport">
+            <summary>
+            生成公积金月报
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJReportUpdate">
+            <summary>
+            生成公积金月报反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.LateFee">
+            <summary>
+            导入滞纳金
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.LateFeeCancel">
+            <summary>
+            导入滞纳金退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.LateFeeUpdate">
+            <summary>
+            导入滞纳金反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.LateFeeUpdateBack">
+            <summary>
+            导入滞纳金反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBuCha">
+            <summary>
+            社保补差
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBuChaCancel">
+            <summary>
+            社保补差退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBuChaUpdate">
+            <summary>
+            社保补差反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBuChaUpdateBack">
+            <summary>
+            社保补差反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBuCha">
+            <summary>
+            医疗补差
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBuChaCancel">
+            <summary>
+            医疗补差退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBuChaUpdate">
+            <summary>
+            医疗补差反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBuChaUpdateBack">
+            <summary>
+            医疗补差反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBuCha">
+            <summary>
+            公积金补差
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBuChaCancel">
+            <summary>
+            公积金补差退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBuChaUpdate">
+            <summary>
+            公积金补差反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBuChaUpdateBack">
+            <summary>
+            公积金补差反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.DocIn">
+            <summary>
+            档案调入
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.ShebaoRateChange">
+            <summary>
+            社保比例变更
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWBuJiao">
+            <summary>
+            合同外补缴
+            </summary>
+            <remarks>
+            应登明与王波要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWBuJiaoCancel">
+            <summary>
+            合同外补缴退回
+            </summary>
+            <remarks>
+            应登明与王波要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWFeedback">
+            <summary>
+            合同外补缴反馈
+            </summary>
+            <remarks>
+            应登明与大磊要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWFeedbackCancel">
+            <summary>
+            合同外补缴反馈退回
+            </summary>
+            <remarks>
+            应登明与大磊要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWBuCha">
+            <summary>
+            合同外补差
+            </summary>
+            <remarks>
+            应登明与王波要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWBuChaCancel">
+            <summary>
+            合同外补差退回
+            </summary>
+            <remarks>
+            应登明与王波要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWBuChaFeedback">
+            <summary>
+            合同外补差反馈
+            </summary>
+            <remarks>
+            应登明与大磊要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.HTWBuChaFeedbackCancel">
+            <summary>
+            合同外补差反馈退回
+            </summary>
+            <remarks>
+            应登明与大磊要求 增加此调账点 并新增相应策略
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.ChangeBase">
+            <summary>
+            后道变更基数
+            </summary>
+            <remarks>
+            请参见修改历史2014-08-08
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.CustomerBillHeaderDelete">
+            <summary>
+            删除付款通知单
+            </summary>
+            <remarks>
+            请参见修改历史2014-08-08
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.EmployeeLeave">
+            <summary>
+            离职
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.EmployeeLeaveCancel">
+            <summary>
+            取消离职（恢复在职）
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBaoJian">
+            <summary>
+            社保报减
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SheBaoBaoJianBack">
+            <summary>
+            社保报减退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBaoJian">
+            <summary>
+            医疗报减
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YLiaoBaoJianBack">
+            <summary>
+            医疗报减退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBaoJian">
+            <summary>
+            公积金报减
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GJJBaoJianBack">
+            <summary>
+            公积金报减退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendEnd">
+            <summary>
+            发送终止委托单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTSendEndBack">
+            <summary>
+            退回终止委托单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackEnd">
+            <summary>
+            反馈终止委托单
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.WTFeedbackEndUpdate">
+            <summary>
+            修改终止反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoJian">
+            <summary>
+            补充医疗报减
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoJianBack">
+            <summary>
+            补充医疗报减退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoJian">
+            <summary>
+            商业保险报减
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoJianBack">
+            <summary>
+            商业保险报减退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.DKHCheHu">
+            <summary>
+            单开户撤户
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GjjBaoJianUpdate">
+            <summary>
+            公积金报减反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.GjjBaoJianUpdateBack">
+            <summary>
+            公积金报减反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.ShebaoBaoJianUpdate">
+            <summary>
+            医疗报减反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.ShebaoBaoJianUpdateBack">
+            <summary>
+            医疗报减反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YliaoBaoJianUpdate">
+            <summary>
+            医疗报减反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.YliaoBaoJianUpdateBack">
+            <summary>
+            医疗报减反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoJianUpdate">
+            <summary>
+            补充医疗报减反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.BCYliaoBaoJianUpdateBack">
+            <summary>
+            补充医疗报减反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoJianUpdate">
+            <summary>
+            商业保险报减反馈
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.SYeBaoXianBaoJianUpdateBack">
+            <summary>
+            商业保险报减反馈退回
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.DkhStopService">
+            <summary>
+            单开户终止服务
+            </summary>
+            <remarks>
+            参见修改历史2014-08-08
+            </remarks>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TZType.Receivable">
+            <summary>
+            应收款预收
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity">
+            <summary>
+            社保接口实体
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.TzEmpBaseId">
+            <summary>
+            雇员调账社保费ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.TiaoZhangId">
+            <summary>
+            调账接口ID（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.BeginFeeDate">
+            <summary>
+            收费开始时间（在某些特殊调账点可以为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.EndFeeDate">
+            <summary>
+            收费结束时间（在某些特殊调账点可以为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.HireId">
+            <summary>
+            雇佣关系ID（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.FeeSourceId">
+            <summary>
+            费用来源ID（如果本次调账有对应的业务编号，请设置成业务编号；如果没有，设置成空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.ShebaoVerId">
+            <summary>
+            社保版本ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.AdjustEvent">
+            <summary>
+            调整事件(对应外地的变更事件，新增，变更，变更首次收费，终止，一次性，取消)
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.InsuranceType">
+            <summary>
+            险种类型(养老：11,失业：12,工伤：13,生育：14,医疗：15,公积金：16,补充公积金：17,其它险种：18)
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.ComBase">
+            <summary>
+            险种企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.PerBase">
+            <summary>
+            险种个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.ComRate">
+            <summary>
+            险种企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.PerRate">
+            <summary>
+            险种个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.ComFee">
+            <summary>
+            险种企业部分金额（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.PerFee">
+            <summary>
+            险种个人部分金额（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.Total">
+            <summary>
+            险种小计（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBaseIfEntity.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity">
+            <summary>
+            服务费接口实体
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.TzEmpFeeId">
+            <summary>
+            雇员调账服务费ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.TiaoZhangId">
+            <summary>
+            调账接口ID（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.BeginFeeDate">
+            <summary>
+            收费开始时间（在某些特殊调账点可以为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.EndFeeDate">
+            <summary>
+            收费结束时间（在某些特殊调账点可以为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.HireId">
+            <summary>
+            雇佣关系ID（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.FeeSourceId">
+            <summary>
+            费用来源ID（如果本次调账有对应的业务编号，请设置成业务编号；如果没有，设置成空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.PrdId">
+            <summary>
+            服务产品ID（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.CombinationProductID">
+            <summary>
+            组合产品编号（如果不是组合产品，请不用设置此属性）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFeeIfEntity.PrdFee">
+            <summary>
+            服务产品金额（不能为空）
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity">
+            <summary>
+            调账接口主实体
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.tzEmpBaseIfEntityList">
+            <summary>
+            社保费列表（可以为空或者多条社保费详细记录）
+            </summary>
+        </member>
+        <member name="F:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.TzEmpFeeIfEntityList">
+            <summary>
+            服务费列表（可以为空或者多条服务费详细记录）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.TiaoZhangId">
+            <summary>
+            调账接口ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.HireId">
+            <summary>
+            雇佣关系ID（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.CityId">
+            <summary>
+            服务执行城市ID（可以为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.IsShebaoFee">
+            <summary>
+            是否有社保费用（如果本次调账过程中，有社保费则将本属性设置为 1，没有则设置为 0）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.IsServiceFee">
+            <summary>
+            是否有服务费用（如果本次调账过程中，有服务费则将本属性设置为 1，没有则设置为 0）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.TiaozhangType">
+            <summary>
+            调账类型（不能为空）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.SourceId">
+            <summary>
+            费用来源ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.IsActive">
+            <summary>
+            内部调用，调用调账接口时不用设置本属性的值
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpIfEntity.Remark">
+            <summary>
+            备注 
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase">
+            <summary>
+            社保信息
+            </summary>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.Copy">
+            <summary>
+            复制一个副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.TzEmpBaseId">
+            <summary>
+            雇员调账社保费中间表ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.TzEmpId">
+            <summary>
+            调账计算ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.TiaozhangId">
+            <summary>
+            调账接口ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.BeginFeeDate">
+            <summary>
+            收费开始时间
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.EndFeeDate">
+            <summary>
+            收费结束时间
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.HireId">
+            <summary>
+            雇佣ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.FeeSourceId">
+            <summary>
+            费用来源ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.ShebaoVerId">
+            <summary>
+            社保版本ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.IsAdjust">
+            <summary>
+            是否险种调整
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.AdjustEvent">
+            <summary>
+            调整事件，对应外地的变更事件，新增，变更，变更首次收费(首次收费时间和收费金额都变化，首次收费时间之前的对应险种清0)，终止
+            <para>
+            新增:1|变更:2|变更首次收费:3|终止:4
+            </para>      
+            <para>
+            新规则：不变:1|新增:2|变更:3|终止:4|取消:5|变更时间：6
+            </para>
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.InsuranceType">
+            <summary>
+            险种类型
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.ComBase">
+            <summary>
+            险种企业基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.PerBase">
+            <summary>
+            险种个人基数
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.ComRate">
+            <summary>
+            险种企业比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.PerRate">
+            <summary>
+            险种个人比例
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.ComFee">
+            <summary>
+            险种企业部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.PerFee">
+            <summary>
+            险种个人部分金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.Total">
+            <summary>
+            险种小计
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.FeeDate">
+            <summary>
+            费用月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.OutDate">
+            <summary>
+            应出帐月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpBase.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee">
+            <summary>
+            服务费信息
+            </summary>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.Copy">
+            <summary>
+            复制一个副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.TzEmpFeeId">
+            <summary>
+            雇员调账服务费中间表ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.TzEmpId">
+            <summary>
+            调账ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.TiaozhangId">
+            <summary>
+            调账接口ID（对应中间表主表）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.BeginFeeDate">
+            <summary>
+            收费开始时间
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.EndFeeDate">
+            <summary>
+            收费结束时间
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.HireId">
+            <summary>
+            雇佣ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.FeeSourceId">
+            <summary>
+            费用来源ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.PrdId">
+            <summary>
+            服务产品ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.CombinationProductID">
+            <summary>
+            是否是组合产品（默认为0 1：是 0：不是）
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.PrdFee">
+            <summary>
+            服务产品金额
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.DicChargesId">
+            <summary>
+            服务项目ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.EmpFeeId">
+            <summary>
+            服务费类别ID
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.FeeDate">
+            <summary>
+            费用月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.OutDate">
+            <summary>
+            出账月份
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:CIIC.OMS.TiaoZhang.BusinessEntity.TzEmpFee.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+    </members>
+</doc>

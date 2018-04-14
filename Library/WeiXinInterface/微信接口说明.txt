@@ -1,0 +1,29 @@
+说明：
+A：
+	Com.Ciicbj.Internet.Wx.Service.Client.dll 是微信桥接器提供的WCF接口的封装，oms系统只调用 *Client提供的方法。
+	依赖：Newtonsoft.Json.dll，Oracle.DataAccess.dll，Com.Ciicbj.Internet.Wx.Core.dll，Com.Ciicbj.Internet.Wx.Service.Contract.dll，Com.Ciicbj.Internet.Wx.Service.Transfer.dll
+	请将Com.Ciicbj.Internet.Wx.Service.Client.dll.config配置到程序中。
+
+	WWxCustomServiceClientAsync 客服
+	WWxSheBaoServiceClientAsync 社保
+	WWxGjjServiceClientAsync 公积金
+	WWxHrServiceClientAsync 人事
+	WWxHealthServiceClientAsync 健康
+
+        WWxBizPointServiceClientAsync OMS业务点调用 
+		new WWxBizPointServiceClientAsync().SynEmpBizInfo(【员工相关信息】同步
+		new WWxBizPointServiceClientAsync().SynYuebaoInfo(月报生成同步
+
+B：
+
+	Com.Ciicbj.Internet.Wx.Service.Contract.dll是对接定义的接口，oms需要实现IOW*的WCF接口，协议要求http协议；
+	依赖：Com.Ciicbj.Internet.Wx.Service.Transfer.dll
+
+	oms需要实现的接口
+
+	IOWxCustomService 客服
+	IOWxSheBaoService 社保
+	IOWxGjjService 公积金
+	IOWxHrService人事
+	IOWxHealthService 健康
+	

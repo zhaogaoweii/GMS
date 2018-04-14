@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AdminMenuConfig>
+  <AdminMenuGroups>
+    <!--<AdminMenuGroup name="管理首页" url="/Account/Auth/Index" icon="icon-home" info="欢迎登录系统！">
+    </AdminMenuGroup>-->
+    <AdminMenuGroup name="系统管理" icon="icon-cog">
+      <AdminMenuArray>
+        <AdminMenu name="用户管理" url="User/Index" info="添加修改删除用户" permission="AccountManage_User" />
+        <AdminMenu name="角色管理" url="Role/Index" info="添加修改删除角色" permission="AccountManage_Role" />
+      </AdminMenuArray>
+    </AdminMenuGroup>
+
+    <AdminMenuGroup name="CRM管理" icon="icon-phone-sign">
+      <AdminMenuArray>
+        <AdminMenu name="公司客户" url="Customer/CompanyIndex" info="添加修改删除来访来电" permission="CrmManage_VisitRecord" />
+        <AdminMenu name="一般客户" url="Customer/ElectricityUserIndex" info="添加修改删除客户" permission="CrmManage_Customer" />
+      </AdminMenuArray>
+    </AdminMenuGroup>
+
+  </AdminMenuGroups>
+</AdminMenuConfig>

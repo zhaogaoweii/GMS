@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C9FD44B-7991-43A7-B08A-6EA6B98C1509}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZGW.GMS.Core</RootNamespace>
+    <AssemblyName>ZGW.GMS.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <WebGreaseLibPath>..\..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AppLibrary">
+      <HintPath>..\..\Library\AppLibrary\AppLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\..\Library\autofac\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\..\Library\autofac\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mef">
+      <HintPath>..\..\Library\autofac\Autofac.Integration.Mef.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\..\Library\autofac\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Wcf">
+      <HintPath>..\..\Library\autofac\Autofac.Integration.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Web">
+      <HintPath>..\..\Library\autofac\Autofac.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Web.Mvc">
+      <HintPath>..\..\Library\autofac\Autofac.Integration.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\Library\NPOI\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Library\iTextSharp\v5.5.6.0\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Library\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\Library\Mongodb\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\Library\Mongodb\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\..\Library\Mongodb\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.GridFS">
+      <HintPath>..\..\Library\Mongodb\MongoDB.Driver.GridFS.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy">
+      <HintPath>..\..\Library\Mongodb\MongoDB.Driver.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\Library\NPOI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\Library\NPOI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\Library\NPOI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\Library\NPOI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebGrease">
+      <HintPath>..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="Caching\CacheHelper.cs" />
+    <Compile Include="Caching\CacheKeyDefinitionAttribute.cs" />
+    <Compile Include="Caching\ICacheKeyService.cs" />
+    <Compile Include="Caching\ICacheProvider.cs" />
+    <Compile Include="Caching\Impl\AppFabricCacheProvider.cs" />
+    <Compile Include="Caching\Impl\CacheKeyService.cs" />
+    <Compile Include="Caching\Impl\DefaultCacheProvider.cs" />
+    <Compile Include="Configuration\Entities\AdminMenuConfig.cs" />
+    <Compile Include="Configuration\Entities\CacheConfig.cs" />
+    <Compile Include="Configuration\Entities\Class1.cs" />
+    <Compile Include="Configuration\Entities\DaoConfig.cs" />
+    <Compile Include="Configuration\Entities\SettingConfig.cs" />
+    <Compile Include="Configuration\Entities\SystemConfig.cs" />
+    <Compile Include="Configuration\IConfigService.cs" />
+    <Compile Include="Configuration\Implement\ConfigService.cs" />
+    <Compile Include="Configuration\OMSSection.cs" />
+    <Compile Include="Data\ADO\IMongoDBHelper.cs" />
+    <Compile Include="Data\ADO\MongoDBHelper.cs" />
+    <Compile Include="Data\ADO\ParameterEntity.cs" />
+    <Compile Include="Data\ADO\SQLHelper.cs" />
+    <Compile Include="Data\DBCategory.cs" />
+    <Compile Include="Data\DomainEntity.cs" />
+    <Compile Include="Data\EntityExtInfo.cs" />
+    <Compile Include="Data\Impl\Repository.cs" />
+    <Compile Include="Data\Impl\RepositoryBase.cs" />
+    <Compile Include="Data\Impl\RepositoryHistory.cs" />
+    <Compile Include="Data\Impl\Transaction.cs" />
+    <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\IRepositoryBase.cs" />
+    <Compile Include="Data\IRepositoryHistory.cs" />
+    <Compile Include="Data\ITransaction.cs" />
+    <Compile Include="Data\IUnitOfWork.cs" />
+    <Compile Include="Data\NHSessionFactoryProvider.cs" />
+    <Compile Include="Data\Orderable.cs" />
+    <Compile Include="Data\PagedListUser\IPagedList.cs" />
+    <Compile Include="Data\PagedListUser\PagedList.cs" />
+    <Compile Include="Data\UnitOfWorkExtentions.cs" />
+    <Compile Include="Dependency\ComponentRegistryAttribute.cs" />
+    <Compile Include="Dependency\Extensions\RegisterExtentions.cs" />
+    <Compile Include="Dependency\InvalidTypes.cs" />
+    <Compile Include="Dependency\Lifetime.cs" />
+    <Compile Include="Dependency\ObjectContainer.cs" />
+    <Compile Include="Dependency\Registration\ClientRegistration.cs" />
+    <Compile Include="Dependency\Registration\ServiceRegistration.cs" />
+    <Compile Include="Description\DescriptionHelper.cs" />
+    <Compile Include="Description\EnumDescription.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventBus.cs" />
+    <Compile Include="Events\EventDispatcher.cs" />
+    <Compile Include="Events\EventHandler.cs" />
+    <Compile Include="Events\EventItem.cs" />
+    <Compile Include="Events\IEventDispatcher.cs" />
+    <Compile Include="Events\IEventHandler.cs" />
+    <Compile Include="ExceptionHandling\DuplicateFaultCodeMonitor.cs" />
+    <Compile Include="ExceptionHandling\ErrorHandler.cs" />
+    <Compile Include="ExceptionHandling\ErrorHandlingBehaviorAttribute.cs" />
+    <Compile Include="ExceptionHandling\FaultCodeAttribute.cs" />
+    <Compile Include="Exceptions\EmailServiceException.cs" />
+    <Compile Include="Exceptions\OMSException.cs" />
+    <Compile Include="Exceptions\SQLInjectionException.cs" />
+    <Compile Include="Localization\Localizer.cs" />
+    <Compile Include="Logging\DBLogging\DBOperation.cs" />
+    <Compile Include="Logging\DBLogging\HistoryRecord.cs" />
+    <Compile Include="Logging\DBLogging\IDBLog.cs" />
+    <Compile Include="Logging\DBLogging\IDBLogHandler.cs" />
+    <Compile Include="Logging\DBLogging\Impl\DBHistory.cs" />
+    <Compile Include="Logging\DBLogging\Impl\DBHistoryDetail.cs" />
+    <Compile Include="Logging\DBLogging\Impl\DBLog.cs" />
+    <Compile Include="Logging\DBLogging\Impl\DBLogBackgroundTask.cs" />
+    <Compile Include="Logging\DBLogging\Impl\MessageQueueHandler.cs" />
+    <Compile Include="Logging\SystemLogging\ILog.cs" />
+    <Compile Include="Logging\SystemLogging\ILogFactory.cs" />
+    <Compile Include="Logging\SystemLogging\Impl\Log4NetFactory.cs" />
+    <Compile Include="Logging\SystemLogging\Impl\Log4NetLogger.cs" />
+    <Compile Include="Logging\SystemLogging\Impl\NullLogger.cs" />
+    <Compile Include="Logging\SystemLogging\Impl\NullLoggerFactory.cs" />
+    <Compile Include="Modules\CoreModule.cs" />
+    <Compile Include="Modules\Entities\FeatureInfo.cs" />
+    <Compile Include="Modules\Entities\FeatureItem.cs" />
+    <Compile Include="Modules\Entities\ModuleInfo.cs" />
+    <Compile Include="Modules\Entities\RouteItem.cs" />
+    <Compile Include="Modules\IModule.cs" />
+    <Compile Include="Modules\IModuleService.cs" />
+    <Compile Include="Modules\Impl\ModuleService.cs" />
+    <Compile Include="Modules\LoadModuleTask.cs" />
+    <Compile Include="Modules\ModuleBase.cs" />
+    <Compile Include="MongoDB\MongoDBEntity.cs" />
+    <Compile Include="MongoDB\PagerInfo.cs" />
+    <Compile Include="MongoDB\QueryableExtensions.cs" />
+    <Compile Include="Mvc\Controller\BaseController.cs" />
+    <Compile Include="Mvc\ErrorHandling\ErrorController.cs" />
+    <Compile Include="Mvc\ErrorHandling\ErrorHandlingModule.cs" />
+    <Compile Include="Mvc\ErrorHandling\OMSHandleErrorAttribute.cs" />
+    <Compile Include="Mvc\Filters\AuthorizeFilterAttribute.cs" />
+    <Compile Include="Mvc\Filters\IDEncodingAttribute.cs" />
+    <Compile Include="Mvc\Filters\ModuleVerificationAttribute.cs" />
+    <Compile Include="Mvc\Html\Controls\CheckBoxList.cs" />
+    <Compile Include="Mvc\Html\Controls\RadioBoxList.cs" />
+    <Compile Include="Mvc\Html\MvcPager\PagerBuilder.cs" />
+    <Compile Include="Mvc\Html\MvcPager\PagerHelper.cs" />
+    <Compile Include="Mvc\Html\MvcPager\PagerItem.cs" />
+    <Compile Include="Mvc\Html\MvcPager\PagerOptions.cs" />
+    <Compile Include="Mvc\ModelBinders\GuidListModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\Int32ArrayModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\Int32ListModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\JsonBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\PagingInfoModelBinder.cs" />
+    <Compile Include="Mvc\MvcModule.cs" />
+    <Compile Include="Mvc\Navigation\INavigationNode.cs" />
+    <Compile Include="Mvc\Navigation\INavigationService.cs" />
+    <Compile Include="Mvc\Result\NewtonJsonResult.cs" />
+    <Compile Include="Mvc\Result\TextJsonResult.cs" />
+    <Compile Include="Mvc\Routes\RouteCollectionExtensions.cs" />
+    <Compile Include="Mvc\Security\SQLInjectionDefense.cs" />
+    <Compile Include="Mvc\ViewModel\PagedListQuery.cs" />
+    <Compile Include="Mvc\ViewPages\OMSViewPage.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="OMSFileManager\FTPFile.cs" />
+    <Compile Include="OperatingResult\OperatingResultEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\BackgroundTask\BackgroundTaskArgs.cs" />
+    <Compile Include="Tasks\BackgroundTask\IBackgroundTask.cs" />
+    <Compile Include="Tasks\BackgroundTask\LoadBackgroundTask.cs" />
+    <Compile Include="Tasks\BootStrapperTask\BootStrapper.cs" />
+    <Compile Include="Tasks\BootStrapperTask\BootStrapperTaskArgs.cs" />
+    <Compile Include="Tasks\BootStrapperTask\HostTargets.cs" />
+    <Compile Include="Tasks\BootStrapperTask\IBootStrapperTask.cs" />
+    <Compile Include="Tasks\BootStrapperTask\TaskUsageAttribute.cs" />
+    <Compile Include="Utility\BusinessHelper.cs" />
+    <Compile Include="Utility\ConfigureHelper.cs" />
+    <Compile Include="Utility\ConvertType.cs" />
+    <Compile Include="Utility\DataTableHelper.cs" />
+    <Compile Include="Utility\DateTimeHelper.cs" />
+    <Compile Include="Utility\DecimalHelper.cs" />
+    <Compile Include="Utility\EncryptionHelper.cs" />
+    <Compile Include="Utility\EnumHelper.cs" />
+    <Compile Include="Utility\FileHelper.cs" />
+    <Compile Include="Utility\ImportResultEntity.cs" />
+    <Compile Include="Utility\Int32Helper.cs" />
+    <Compile Include="Utility\SerializationHelper.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\SystemHelper.cs" />
+    <Compile Include="Utility\TemplateHelper.cs" />
+    <Compile Include="Utility\ValidationHelper.cs" />
+    <Compile Include="Utility\WebConfigHelper.cs" />
+    <Compile Include="Utility\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logging\DBLogging\Mapping\DBHistory.hbm.xml" />
+    <Content Include="Logging\SystemLogging\SQL\Log4Net.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mvc\Extention\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

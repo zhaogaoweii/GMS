@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CIIC.OMS.TiaoZhangResult.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository">
+            <summary>
+            调账结果数据访问层
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository">
+            <summary>
+            调账结果数据访问层接口
+            </summary>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.GetById(System.Int32)">
+            <summary>
+            根据主键编号获取调账结果实体
+            </summary>
+            <param name="id">主键编号</param>
+            <returns>调账结果实体</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.GetByTzId(System.Int32)">
+            <summary>
+            根据调账编号获取调账结果实体集合
+            </summary>
+            <param name="tzId">调账编号</param>
+            <returns>调账结果实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.GetByHireIdAndFeeMonth(System.Nullable{System.Int32},System.Nullable{System.DateTime})">
+            <summary>
+            根据雇佣关系ID或费用月份获取调账结果实体集合
+            <para>
+            两个条件不能同时为空
+            </para>
+            <para>
+            只传入HireId则按根据HireId的条件进行查询　并返回结果
+            </para>
+            <para>
+            只传入FeeMonth则按费用月份进行条件查询　并返回结果
+            </para>
+            </summary>
+            <param name="hireId">雇佣关系ID</param>
+            <param name="feeMonth">费用月份</param>
+            <returns>调账结果实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.GetMaxTzResults(System.Int32)">
+            <summary>
+            获取最大批次调账结果记录集合
+            </summary>
+            <returns>最大批次调账结果记录集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResult,System.Int32@)">
+            <summary>
+            添加实体并返回执行SQL
+            </summary>
+            <param name="tzResult">调账结果实体</param>
+            <param name="id">主键ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResult)">
+            <summary>
+            添加调账结果实体　并返回主键ID
+            </summary>
+            <param name="tzResult">调账结果实体</param>
+            <returns>返回主键ID</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.DeleteById(System.Int32)">
+            <summary>
+            根据调账结果实体ID删除单条记录
+            </summary>
+            <param name="id">调账结果实体ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.DeleteByTzId(System.Int32)">
+            <summary>
+            根据调账ID删除一批记录
+            </summary>
+            <param name="tzId">调账ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.DeleteByHireIdAndFeeMonth(System.Nullable{System.Int32},System.Nullable{System.DateTime})">
+            <summary>
+            <para>
+            根据雇佣关系ID或费用月份删除调账实体记录
+            两个条件不能同时为空
+            </para>
+            <para>
+            只传入HireId则按根据HireId的条件进行查询　并返回结果
+            </para>
+            <para>
+            只传入FeeMonth则按费用月份进行条件查询　并返回结果
+            </para>
+            </summary>
+            <param name="hireId">雇佣关系ID</param>
+            <param name="feeMonth">费用月份</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultRepository.UpdateById(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResult)">
+            <summary>
+            更新调账结果实体
+            </summary>
+            <param name="tzResult">调账结果实体</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.GetById(System.Int32)">
+            <summary>
+            根据主键编号获取调账结果实体
+            </summary>
+            <param name="id">主键编号</param>
+            <returns>调账结果实体</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.GetByTzId(System.Int32)">
+            <summary>
+            根据调账编号获取调账结果实体集合
+            </summary>
+            <param name="tzId">调账编号</param>
+            <returns>调账结果实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.GetByHireIdAndFeeMonth(System.Nullable{System.Int32},System.Nullable{System.DateTime})">
+            <summary>
+            根据雇佣关系ID或费用月份获取调账结果实体集合
+            <para>
+            两个条件不能同时为空
+            </para>
+            <para>
+            只传入HireId则按根据HireId的条件进行查询　并返回结果
+            </para>
+            <para>
+            只传入FeeMonth则按费用月份进行条件查询　并返回结果
+            </para>
+            </summary>
+            <param name="hireId">雇佣关系ID</param>
+            <param name="feeMonth">费用月份</param>
+            <returns>调账结果实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.GetMaxTzResults(System.Int32)">
+            <summary>
+            获取最大批次调账结果记录集合
+            </summary>
+            <returns>最大批次调账结果记录集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResult,System.Int32@)">
+            <summary>
+            添加实体并返回执行SQL
+            </summary>
+            <param name="tzResult">调账结果实体</param>
+            <param name="id">主键ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResult)">
+            <summary>
+            添加调账结果实体　并返回主键ID
+            </summary>
+            <param name="tzResult">调账结果实体</param>
+            <returns>返回主键ID</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.DeleteById(System.Int32)">
+            <summary>
+            根据调账结果实体ID删除单条记录
+            </summary>
+            <param name="id">调账结果实体ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.DeleteByTzId(System.Int32)">
+            <summary>
+            根据调账ID删除一批记录
+            </summary>
+            <param name="tzId">调账ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.DeleteByHireIdAndFeeMonth(System.Nullable{System.Int32},System.Nullable{System.DateTime})">
+            <summary>
+            <para>
+            根据雇佣关系ID或费用月份删除调账实体记录
+            两个条件不能同时为空
+            </para>
+            <para>
+            只传入HireId则按根据HireId的条件进行查询　并返回结果
+            </para>
+            <para>
+            只传入FeeMonth则按费用月份进行条件查询　并返回结果
+            </para>
+            </summary>
+            <param name="hireId">雇佣关系ID</param>
+            <param name="feeMonth">费用月份</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultRepository.UpdateById(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResult)">
+            <summary>
+            更新调账结果实体
+            </summary>
+            <param name="tzResult">调账结果实体</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository">
+            <summary>
+            调账结果费用明细数据访问
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository">
+            <summary>
+            调账结果费用明细数据访问接口
+            </summary>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultServiceDetail,System.Int32@)">
+            <summary>
+            添加调账结果费用明细记录
+            </summary>
+            <param name="serviceDetail">费用明细实体</param>
+            <param name="id">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.DeleteById(System.Int32)">
+            <summary>
+            根据调账结果费用明细ID删除费用明细记录
+            </summary>
+            <param name="id">调账结果费用明细ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.DeleteByTzId(System.Int32)">
+            <summary>
+            根据调账接口ID删除费用明细记录
+            </summary>
+            <param name="tzId">调账接口ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.DeleteByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID删除费用明细记录
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.UpdateById(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultServiceDetail)">
+            <summary>
+            更新调账结果明细实体更新记录
+            </summary>
+            <param name="serviceDetail">调账结果明细实体</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.GetById(System.Int32)">
+            <summary>
+            根据调账结果费用明细ID获取费用明细实体
+            </summary>
+            <param name="id">调账结果费用明细ID</param>
+            <returns>返回調賬結果費用明細實體</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.GetByTzId(System.Int32)">
+            <summary>
+            根据调账ID获取费用明细实体
+            </summary>
+            <param name="tzId">调账ID</param>
+            <returns>费用明细实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultServiceDetailRepository.GetByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID获取费用明细实体
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>费用明细实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultServiceDetail,System.Int32@)">
+            <summary>
+            添加调账结果费用明细记录
+            </summary>
+            <param name="serviceDetail">费用明细实体</param>
+            <param name="id">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.DeleteById(System.Int32)">
+            <summary>
+            根据调账结果费用明细ID删除费用明细记录
+            </summary>
+            <param name="id">调账结果费用明细ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.DeleteByTzId(System.Int32)">
+            <summary>
+            根据调账接口ID删除费用明细记录
+            </summary>
+            <param name="tzId">调账接口ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.DeleteByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID删除费用明细记录
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.UpdateById(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultServiceDetail)">
+            <summary>
+            更新调账结果明细实体更新记录
+            </summary>
+            <param name="serviceDetail">调账结果明细实体</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.GetById(System.Int32)">
+            <summary>
+            根据调账结果费用明细ID获取费用明细实体
+            </summary>
+            <param name="id">调账结果费用明细ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.GetByTzId(System.Int32)">
+            <summary>
+            根据调账ID获取费用明细实体
+            </summary>
+            <param name="tzId">调账ID</param>
+            <returns>费用明细实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultServiceDetailRepository.GetByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID获取费用明细实体
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>费用明细实体集合</returns>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository">
+            <summary>
+            调账结果社保明细数据访问层
+            </summary>
+        </member>
+        <member name="T:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository">
+            <summary>
+            调账结果社保明细数据访问接口
+            </summary>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultShebaoDetail,System.Int32@)">
+            <summary>
+            添加调账结果社保明细记录
+            </summary>
+            <param name="shebaoDetail">社保明细实体</param>
+            <param name="id">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.DeleteById(System.Int32)">
+            <summary>
+            根据调账结果社保明细ID删除社保明细记录
+            </summary>
+            <param name="id">调账结果社保明细ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.DeleteByTzId(System.Int32)">
+            <summary>
+            根据调账接口ID删除社保明细记录
+            </summary>
+            <param name="tzId">调账接口ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.DeleteByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID删除社保明细记录
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.UpdateById(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultShebaoDetail)">
+            <summary>
+            更新调账结果明细实体更新记录
+            </summary>
+            <param name="shebaoDetail">调账结果明细实体</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.GetById(System.Int32)">
+            <summary>
+            根据调账结果社保明细ID获取社保明细实体
+            </summary>
+            <param name="id">调账结果社保明细ID</param>
+            <returns>社保明细实体</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.GetByTzId(System.Int32)">
+            <summary>
+            根据调账ID获取社保明细实体
+            </summary>
+            <param name="tzId">调账ID</param>
+            <returns>社保明细实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.ITzResultShebaoDetailRepository.GetByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID获取社保明细实体
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>社保明细实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.Add(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultShebaoDetail,System.Int32@)">
+            <summary>
+            添加调账结果社保明细记录
+            </summary>
+            <param name="shebaoDetail">社保明细实体</param>
+            <param name="id">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.DeleteById(System.Int32)">
+            <summary>
+            根据调账结果社保明细ID删除社保明细记录
+            </summary>
+            <param name="id">调账结果社保明细ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.DeleteByTzId(System.Int32)">
+            <summary>
+            根据调账接口ID删除社保明细记录
+            </summary>
+            <param name="tzId">调账接口ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.DeleteByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID删除社保明细记录
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.UpdateById(CIIC.OMS.TiaoZhangResult.BusinessEntity.TzResultShebaoDetail)">
+            <summary>
+            更新调账结果明细实体更新记录
+            </summary>
+            <param name="shebaoDetail">调账结果明细实体</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.GetById(System.Int32)">
+            <summary>
+            根据调账结果社保明细ID获取社保明细实体
+            </summary>
+            <param name="id">调账结果社保明细ID</param>
+            <returns>返回执行SQL</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.GetByTzId(System.Int32)">
+            <summary>
+            根据调账ID获取社保明细实体
+            </summary>
+            <param name="tzId">调账ID</param>
+            <returns>社保明细实体集合</returns>
+        </member>
+        <member name="M:CIIC.OMS.TiaoZhangResult.Repository.Impl.TzResultShebaoDetailRepository.GetByTzResultId(System.Int32)">
+            <summary>
+            根据调账结果ID获取社保明细实体
+            </summary>
+            <param name="tzResultId">调账结果ID</param>
+            <returns>社保明细实体集合</returns>
+        </member>
+    </members>
+</doc>

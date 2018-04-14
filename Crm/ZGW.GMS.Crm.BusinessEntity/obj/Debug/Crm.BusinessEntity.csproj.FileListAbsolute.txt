@@ -1,0 +1,14 @@
+E:\DownLoad\GMS\GMS\Src\Crm.BusinessEntity\bin\Debug\Crm.BusinessEntity.dll
+E:\DownLoad\GMS\GMS\Src\Crm.BusinessEntity\bin\Debug\Crm.BusinessEntity.pdb
+E:\DownLoad\GMS\GMS\Src\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.dll
+E:\DownLoad\GMS\GMS\Src\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.pdb
+E:\框架\GMS\Src\Crm.BusinessEntity\bin\Debug\Crm.BusinessEntity.dll
+E:\框架\GMS\Src\Crm.BusinessEntity\bin\Debug\Crm.BusinessEntity.pdb
+E:\框架\GMS\Src\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.csprojResolveAssemblyReference.cache
+E:\框架\GMS\Src\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.dll
+E:\框架\GMS\Src\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.pdb
+E:\框架\GMS\Src\Crm\Crm.BusinessEntity\bin\Debug\Crm.BusinessEntity.dll
+E:\框架\GMS\Src\Crm\Crm.BusinessEntity\bin\Debug\Crm.BusinessEntity.pdb
+E:\框架\GMS\Src\Crm\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.csprojResolveAssemblyReference.cache
+E:\框架\GMS\Src\Crm\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.dll
+E:\框架\GMS\Src\Crm\Crm.BusinessEntity\obj\Debug\Crm.BusinessEntity.pdb

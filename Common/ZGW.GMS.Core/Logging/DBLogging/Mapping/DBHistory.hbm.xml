@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    assembly="ZGW.GMS.Core"
+    namespace="ZGW.GMS.Core.DBLogging">
+  <class name="DBHistory" table="TB_SYS_DBHISTORY">
+    <id name="Id" column="HIS_ID">
+      <generator class="increment" />
+    </id>
+    <property name="UserName"></property>
+    <property name="Module" />
+    <property name="Func"></property>
+    <property name="Action"></property>
+    <property name="TableName"></property>
+    <property name="RecordID"></property>
+    <property name="UpdateTime"></property>
+    <bag name="Details" inverse="false">
+      <key column="HIS_ID"></key>
+      <one-to-many class="DBHistoryDetail"/>
+    </bag>
+  </class>
+  <class name="DBHistoryDetail" table="TB_SYS_HISDETAIL">
+    <id name="Id" column="HISDETAIL_ID">
+      <generator class="increment" />
+    </id>
+    <property name="Content"></property>
+  </class>
+</hibernate-mapping>
