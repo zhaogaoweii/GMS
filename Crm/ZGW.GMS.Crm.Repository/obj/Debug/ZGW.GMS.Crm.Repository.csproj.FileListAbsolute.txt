@@ -33,3 +33,8 @@ E:\DownLoad\Myself_0403\bin\ZGW.GMS.Crm.Repository.pdb
 E:\DownLoad\Myself_0403\Crm\ZGW.GMS.Crm.Repository\obj\Debug\ZGW.GMS.Crm.Repository.csprojResolveAssemblyReference.cache
 E:\DownLoad\Myself_0403\Crm\ZGW.GMS.Crm.Repository\obj\Debug\ZGW.GMS.Crm.Repository.dll
 E:\DownLoad\Myself_0403\Crm\ZGW.GMS.Crm.Repository\obj\Debug\ZGW.GMS.Crm.Repository.pdb
+E:\框架\GMS\bin\ZGW.GMS.Crm.Repository.dll
+E:\框架\GMS\bin\ZGW.GMS.Crm.Repository.pdb
+E:\框架\GMS\Crm\ZGW.GMS.Crm.Repository\obj\Debug\ZGW.GMS.Crm.Repository.csprojResolveAssemblyReference.cache
+E:\框架\GMS\Crm\ZGW.GMS.Crm.Repository\obj\Debug\ZGW.GMS.Crm.Repository.dll
+E:\框架\GMS\Crm\ZGW.GMS.Crm.Repository\obj\Debug\ZGW.GMS.Crm.Repository.pdb

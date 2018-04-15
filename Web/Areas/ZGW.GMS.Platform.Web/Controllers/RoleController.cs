@@ -11,7 +11,7 @@ namespace ZGW.GMS.Platform.Web.Controllers
     [ZGW.GMS.Core.Mvc.Filters.AuthorizeFilter]
     public class RoleController : Controller
     {
-      //
+        //
         // GET: /User/
         IMembershipService _iMembershipService;
         public RoleController(IMembershipService iMembershipService)
@@ -25,16 +25,16 @@ namespace ZGW.GMS.Platform.Web.Controllers
             {
                 pageIndex = Convert.ToInt32(Request["pageIndex"]);
             }
-            List<Role> list = _iMembershipService.GetListuser("", "", 0, 0, true);
+            List<Role> list = _iMembershipService.GetListByPageToList("", "", pageIndex, 20, true);
 
-            return View(list.ToPagedList<User>(pageIndex, 20));
+            return View(list.ToPagedList<Role>(pageIndex, 20));
         }
         public ActionResult Edit(int id = 0)
         {
             Role model = new BusinessEntity.Role();
             if (id != 0)
             {
-                model = _iMembershipService.GetModelByStrWhere(string.Format(" and ID={0} ", id));
+                model = _iMembershipService.GetModelRole(id);
             }
 
             return View(model);
@@ -42,7 +42,15 @@ namespace ZGW.GMS.Platform.Web.Controllers
         [HttpPost]
         public ActionResult Edit(Role model)
         {
-            int count = _iMembershipService.Add(model);
+            int count = 0;
+            if (model.ID != 0)
+            {
+                count = _iMembershipService.UpdateRole(model) ? 1 : 0;
+            }
+            else
+            {
+                count = _iMembershipService.AddRole(model);
+            }
             string result = "失败";
             if (count > 0)
             {
@@ -63,7 +71,7 @@ namespace ZGW.GMS.Platform.Web.Controllers
         [HttpPost]
         public ActionResult Del(string ids)
         {
-            bool isOk = _iMembershipService.DeleteList(ids);
+            bool isOk = _iMembershipService.DeleteListRole(ids);
             string result = "失败";
             if (isOk)
             {

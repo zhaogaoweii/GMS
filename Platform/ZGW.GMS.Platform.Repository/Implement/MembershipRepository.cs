@@ -380,8 +380,228 @@ namespace ZGW.GMS.Platform.Repository.Implement
             }
 
         }
-
         #endregion  BasicMethod
+
+
+        #region
+
+
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public int AddRole(Role model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into tb_Role(");
+            strSql.Append("Name,CreateTime,Info,BusinessPermissionString)");
+            strSql.Append(" values (");
+            strSql.Append("@Name,@CreateTime,@Info,@BusinessPermissionString)");
+            strSql.Append(";select @@IDENTITY");
+            SqlParameter[] parameters = {
+					new SqlParameter("@Name", SqlDbType.NVarChar,50),
+					new SqlParameter("@CreateTime", SqlDbType.DateTime),
+					new SqlParameter("@Info", SqlDbType.NVarChar,300),
+					new SqlParameter("@BusinessPermissionString", SqlDbType.NVarChar,4000)};
+            parameters[0].Value = model.Name;
+            parameters[1].Value = model.CreateTime;
+            parameters[2].Value = model.Info;
+            parameters[3].Value = model.BusinessPermissionString;
+
+            object obj = SQLHelper.GetSingle(strSql.ToString(), parameters);
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public bool UpdateRole(Role model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update tb_Role set ");
+            strSql.Append("Name=@Name,");
+            strSql.Append("CreateTime=@CreateTime,");
+            strSql.Append("Info=@Info,");
+            strSql.Append("BusinessPermissionString=@BusinessPermissionString");
+            strSql.Append(" where ID=@ID");
+            SqlParameter[] parameters = {
+					new SqlParameter("@Name", SqlDbType.NVarChar,50),
+					new SqlParameter("@CreateTime", SqlDbType.DateTime),
+					new SqlParameter("@Info", SqlDbType.NVarChar,300),
+					new SqlParameter("@BusinessPermissionString", SqlDbType.NVarChar,4000),
+					new SqlParameter("@ID", SqlDbType.Int,4)};
+            parameters[0].Value = model.Name;
+            parameters[1].Value = model.CreateTime;
+            parameters[2].Value = model.Info;
+            parameters[3].Value = model.BusinessPermissionString;
+            parameters[4].Value = model.ID;
+
+            int rows = SQLHelper.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        public bool DeleteRole(int ID)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from tb_Role ");
+            strSql.Append(" where ID=@ID");
+            SqlParameter[] parameters = {
+					new SqlParameter("@ID", SqlDbType.Int,4)
+			};
+            parameters[0].Value = ID;
+
+            int rows = SQLHelper.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 批量删除数据
+        /// </summary>
+        public bool DeleteListRole(string IDlist)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from tb_Role ");
+            strSql.Append(" where ID in (" + IDlist + ")  ");
+            int rows = SQLHelper.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public Role GetModelRole(int ID)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 ID,Name,CreateTime,Info,BusinessPermissionString from tb_Role ");
+            strSql.Append(" where ID=@ID");
+            SqlParameter[] parameters = {
+					new SqlParameter("@ID", SqlDbType.Int,4)
+			};
+            parameters[0].Value = ID;
+
+            Role model = new Role();
+            DataSet ds = SQLHelper.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModelRole(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public Role DataRowToModelRole(DataRow row)
+        {
+            Role model = new Role();
+            if (row != null)
+            {
+                if (row["ID"] != null && row["ID"].ToString() != "")
+                {
+                    model.ID = int.Parse(row["ID"].ToString());
+                }
+                if (row["Name"] != null)
+                {
+                    model.Name = row["Name"].ToString();
+                }
+                if (row["CreateTime"] != null && row["CreateTime"].ToString() != "")
+                {
+                    model.CreateTime = DateTime.Parse(row["CreateTime"].ToString());
+                }
+                if (row["Info"] != null)
+                {
+                    model.Info = row["Info"].ToString();
+                }
+                if (row["BusinessPermissionString"] != null)
+                {
+                    model.BusinessPermissionString = row["BusinessPermissionString"].ToString();
+                }
+            }
+            return model;
+        }
+        /// <summary>
+        /// 分页获取数据列表
+        /// </summary>
+        public DataSet GetListByPageByRole(string strWhere, string orderby, int startIndex, int endIndex, bool isAll = false)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("SELECT * FROM ( ");
+            strSql.Append(" SELECT ROW_NUMBER() OVER (");
+            if (!string.IsNullOrEmpty(orderby.Trim()))
+            {
+                strSql.Append("order by T." + orderby);
+            }
+            else
+            {
+                strSql.Append("order by T.ID desc");
+            }
+            strSql.Append(")AS Row, T.*  from tb_Role T ");
+            if (!string.IsNullOrEmpty(strWhere.Trim()))
+            {
+                strSql.Append(" WHERE " + strWhere);
+            }
+            strSql.Append(" ) TT");
+            if (!isAll)
+            {
+                strSql.AppendFormat(" WHERE TT.Row between {0} and {1}", startIndex, endIndex);
+            }
+            return SQLHelper.Query(strSql.ToString());
+        }
+        /// <summary>
+        ///角色 分页获取数据
+        /// </summary>
+        /// <returns></returns>
+        public List<Role> GetListByPageToList(string strWhere, string orderby, int startIndex, int endIndex, bool isAll = false)
+        {
+            DataTable dt = GetListByPageByRole(strWhere, orderby, startIndex, endIndex, isAll).Tables[0];
+            List<Role> list = new List<Role>();
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+
+                    Role model = DataRowToModelRole(dr);
+                    list.Add(model);
+                }
+            }
+            return list;
+        }
+        #endregion
         #region  ExtensionMethod
 
         #endregion  ExtensionMethod

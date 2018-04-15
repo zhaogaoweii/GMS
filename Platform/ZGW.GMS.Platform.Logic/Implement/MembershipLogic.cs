@@ -65,5 +65,44 @@ namespace ZGW.GMS.Platform.Logic.Implement
         {
             return _iMembershipRepository.DeleteList(IDlist);
         }
+
+        #region 角色
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public int AddRole(Role model) 
+        {
+            return _iMembershipRepository.AddRole(model);
+        }
+        /// <summary>
+        /// 角色更新一条数据
+        /// </summary>
+        public bool UpdateRole(Role model) 
+        {
+            return _iMembershipRepository.UpdateRole(model);
+        }
+        /// <summary>
+        /// 批量删除数据
+        /// </summary>
+        public bool DeleteListRole(string IDlist) 
+        {
+            return _iMembershipRepository.DeleteListRole(IDlist);
+        }
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public Role GetModelRole(int ID) 
+        {
+            return _iMembershipRepository.GetModelRole(ID);
+        }
+        /// <summary>
+        ///角色 分页获取数据
+        /// </summary>
+        /// <returns></returns>
+        public List<Role> GetListByPageToList(string strWhere, string orderby, int startIndex, int endIndex, bool isAll = false) 
+        {
+            return _iMembershipRepository.GetListByPageToList(strWhere,orderby,startIndex,endIndex,isAll);
+        }
+        #endregion
     }
 }

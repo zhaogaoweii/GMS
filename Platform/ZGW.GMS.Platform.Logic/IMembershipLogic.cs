@@ -35,5 +35,29 @@ namespace ZGW.GMS.Platform.Logic
         /// 批量删除数据
         /// </summary>
         bool DeleteList(string IDlist);
+
+        #region 角色
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        int AddRole(Role model);
+        /// <summary>
+        /// 角色更新一条数据
+        /// </summary>
+        bool UpdateRole(Role model);
+        /// <summary>
+        /// 批量删除数据
+        /// </summary>
+        bool DeleteListRole(string IDlist);
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        Role GetModelRole(int ID);
+        /// <summary>
+        ///角色 分页获取数据
+        /// </summary>
+        /// <returns></returns>
+        List<Role> GetListByPageToList(string strWhere, string orderby, int startIndex, int endIndex, bool isAll = false);
+        #endregion
     }
 }
