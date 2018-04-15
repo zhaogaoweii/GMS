@@ -36,7 +36,7 @@ namespace ZGW.GMS.Platform.Web.Controllers
             {
                 model = _iMembershipService.GetModelRole(id);
             }
-
+            GetBusinessPermissionList();
             return View(model);
         }
         [HttpPost]
@@ -80,5 +80,12 @@ namespace ZGW.GMS.Platform.Web.Controllers
             return this.RefreshParent(result);
         }
 
+        public void GetBusinessPermissionList()
+        {
+            List<SelectListItem> list = new List<SelectListItem>();
+            SelectListItem item = new SelectListItem { Text = "zzz", Value = "fff", Selected = false };
+            list.Add(item);
+            ViewData["BusinessPermissionList"] = list;
+        }
     }
 }
