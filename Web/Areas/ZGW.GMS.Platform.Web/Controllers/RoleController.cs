@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using ZGW.GMS.Platform.BusinessEntity;
 using ZGW.GMS.Platform.Service.Interface;
 using ZGW.GMS.Core.PagedListUser;
+using ZGW.GMS.Core.Utility;
 namespace ZGW.GMS.Platform.Web.Controllers
 {
     [ZGW.GMS.Core.Mvc.Filters.AuthorizeFilter]
@@ -82,10 +83,8 @@ namespace ZGW.GMS.Platform.Web.Controllers
 
         public void GetBusinessPermissionList()
         {
-            List<SelectListItem> list = new List<SelectListItem>();
-            SelectListItem item = new SelectListItem { Text = "zzz", Value = "fff", Selected = false };
-            list.Add(item);
-            ViewData["BusinessPermissionList"] = list;
+            var businessPermissionList = EnumHelper.GetItemValueList<EnumBusinessPermission>();
+            this.ViewBag.BusinessPermissionList = new SelectList(businessPermissionList, "Key", "Value");
         }
     }
 }
