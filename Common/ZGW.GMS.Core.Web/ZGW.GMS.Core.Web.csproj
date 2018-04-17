@@ -42,8 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppContext.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Mvc\Html\StaticFileHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -70,6 +70,7 @@ namespace ZGW.GMS.Platform.Web.Controllers
                 Session["user"] = user;
                 //检查Application
                 Session["userName"] = user.LoginName;
+                
                 //if (this.HttpContext.Application["ModuleRootList"] == null)
                 //{
                 //    this.HttpContext.Application["ModuleRootList"] = moduleService.GetModuleRoots();
