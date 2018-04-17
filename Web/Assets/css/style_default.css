@@ -1,12 +1,12 @@
 /***
-default theme
+blue theme
 ***/
 
 /***
 Reset and overrides  
 ***/
 body { 
-  background-color:#3d3d3d !important;
+  background-color:#fafafa !important;
 }
 
 /***
@@ -15,16 +15,16 @@ Page header
 .header .navbar-inner {
   filter:none !important;
   background-image: none !important;
-  background-color: #1f1f1f !important;
+  background-color: #434343 !important;
 }
 
 .header .btn-navbar {  
-  background-color: #1f1f1f !important;
+  background-color: #434343 !important;
 } 
 
 .header .nav .dropdown-toggle:hover, 
 .header .nav .dropdown.open .dropdown-toggle {
-  background-color: #333 !important;
+  background-color: #4f4f4f !important;
 }
 
 .header .nav li.dropdown .dropdown-toggle i {
@@ -34,57 +34,60 @@ Page header
 /***
 Page sidebar
 ***/
+.page-content {
+  border-left: 1px solid #e2e2e2 !important;
+  border-bottom: 1px solid #e2e2e2 !important;
+}
+
 .page-sidebar > ul > li > a {
-  border-top: 1px solid #595959 !important;
-  color: #fff !important;
+  border-top: 1px solid #e2e2e2 !important;
+  color: #000 !important;
+  font-weight: 400;
+}
+
+.page-sidebar > ul > li:first-child > a {
+   border-top: 1px solid transparent !important;
 }
 
 .page-sidebar > ul > li:last-child > a {
    border-bottom: 1px solid transparent !important;
 }
 
-.page-sidebar > ul > li:nth-child(3) > a {
-  border-top-color: transparent !important;
-}
-
-.page-sidebar > ul > li > a i {
-   color: #808080;
+.page-sidebar > ul > li a i {
+   color: #ccc !important;
 }
 
 .page-sidebar > ul > li.has-sub.open >a, 
 .page-sidebar > ul > li >a:hover, 
 .page-sidebar > ul > li:hover>a {  
-  background: #313131;
+  background: #eee;
+  border-top: 1px solid #e8e8e8;
 }
 
-.page-sidebar > ul > li.active > a {
-  background: #e02222 !important;  
-  border-top-color: transparent !important;
-  color:#fff;
+.page-sidebar > ul > li.active > a .selected {
+  right:-7px;
+  top:1px;
+  width: 7px;
+  height: 39px;
+  background-image: url("../img/sidebar-menu-arrow-green.png");
 }  
 
+.page-sidebar > ul > li.active > a{
+  background: #28b779 !important;
+  border-top-color: transparent !important;
+  color:#fff !important;
+}  
 .page-sidebar > ul > li.active > a i {
-  color:#fff;
+  color:#fff !important;
 }
-
 .page-sidebar > ul > li > a.open {
-  background: #313131;
-}
-
-.page-sidebar ul > li > a .arrow:before,
-.page-sidebar > ul > li > a .arrow.open:before {  
-   color: #919091 !important;
-}
-
-.page-sidebar ul > li.active > a .arrow:before,
-.page-sidebar > ul > li.active > a .arrow.open:before {  
-   color: #fff !important;
+  background: #fff;
 }
 
 .page-sidebar > ul > li > ul.sub > li > a {
-  color: #fff;
+  color: #000;
   margin-left:0px;  
-  padding-left: 5px; 
+  padding-left: 50px; 
 }
 
 .page-sidebar > ul > li > ul.sub > li:first-child > a {
@@ -93,47 +96,45 @@ Page sidebar
 
 .page-sidebar > ul > li > ul.sub > li.active > a, 
 .page-sidebar > ul > li > ul.sub > li > a:hover {
-  color: #fff !important;
-  background: #4b4b4b !important;  
-}
-
-.page-sidebar > ul > li > ul.sub > li > a:hover {
-  background: #4b4b4b !important;
+  color: #818181 !important;
+  background: #efefef !important;  
 }
 
 .page-sidebar .sidebar-search input{
-  background-color: #3d3d3d  !important;  
-  color: #bababa !important;
+  background-color: #fbfbfb  !important;  
+  color: #727272 !important;
 }
 
 .page-sidebar .sidebar-search .input-box {
-  border-bottom-color: #959595  !important;
+  border-bottom-color: #cccccc  !important;
 }
 
 .page-sidebar .sidebar-search .submit {
-  background-image: url(../img/search-icon.png);
+  background-image: url(../img/search-icon-white.png);
 }
 
 /***
 Sidebar toggler
 ***/
 .sidebar-toggler {  
-  background-image: url(../img/sidebar-toggler.jpg);
-  background-color: #333;
+  background-image: url(../img/sidebar-toggler-light.jpg);
+  /*background-color: #333;*/
+  background-color:#fff;
 }
 
 /* search box bg color on expanded */
 .sidebar-closed .page-sidebar .sidebar-search.open {
-  background-color: #3d3d3d !important;
+  background-color: #fbfbfb !important;
 }
 
 .sidebar-closed .page-sidebar .sidebar-search.open .remove {  
-  background-image: url("../img/sidebar-search-close.png");
+  background-image: url("../img/sidebar-search-close-light.png");
 }
 
 /* sub menu bg color on hover menu item */
 .sidebar-closed .page-sidebar > ul > li.has-sub:hover .sub {
-  background-color: #3d3d3d;
+  background-color: #fbfbfb;
+
 }
 
 /***
@@ -144,18 +145,41 @@ Landscape phone to portrait tablet
   page sidebar
   ***/
   .page-sidebar {
-    background-color: #232427 !important;
+    background-color: #f1f1f1 !important;
+ 	  border-right: none !important;
   }
 
   .page-sidebar > ul > li > a {
-    border-top: 1px solid #2c2d30 !important;
+    border-top: 1px solid #ccc !important;
+  }
+  
+  .page-sidebar > ul > li:first-child > a {
+    border-top: 0 !important;
   }
 
   .page-sidebar > ul > li:last-child > a {
     border-bottom: 0 !important;
   }
 
+  .page-sidebar > ul > li.has-sub.open > a, 
+  .page-sidebar > ul > li >a:hover, 
+  .page-sidebar > ul > li:hover>a {  
+    background: #ccc;
+  }
+
+  .page-sidebar > ul > li > a:hover > i {
+    /*color: #333 !important;*/
+    color:#fbfbfb !important;
+  }
+
+  .page-sidebar > ul > li > ul.sub > li.active > a, 
+  .page-sidebar > ul > li > ul.sub > li > a:hover {
+    /*background: #ccc !important;*/  
+    background: #fff !important;
+  }
+
+
   .page-sidebar .sidebar-search input{
-    background-color: #232427  !important;  
+    background-color: #f1f1f1  !important;  
   }
 }

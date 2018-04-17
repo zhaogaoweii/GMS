@@ -1,13 +1,14 @@
 ﻿//选择主题及初始化主题逻辑
 (function () {
-    $(".color-panel .color-mode ul li").click(function () {
-        var color = $(this).attr("data-style");
-        $.cookie('currentTheme', color, { expires: 7, path: '/' });
-    });
-    var currentTheme = $.cookie('currentTheme');
-    if (currentTheme != null && currentTheme) {
-        $('#style_color').attr("href", "/assets/css/style_" + currentTheme + ".css");
-    }
+    //$(".color-panel .color-mode ul li").click(function () {
+    //    var color = $(this).attr("data-style");
+    //    $.cookie('currentTheme', color, { expires: 7, path: '/' });
+    //});
+    //var currentTheme = $.cookie('currentTheme');
+    //if (currentTheme != null && currentTheme) {
+    //    $('#style_color').attr("href", "/assets/css/style_" + currentTheme + ".css");
+    //}
+    $('#style_color').attr("href", "/assets/css/style_default.css");
 })();
 
 //新菜单根据Url决定逻辑
