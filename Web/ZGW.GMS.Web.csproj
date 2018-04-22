@@ -134,7 +134,6 @@
     <Compile Include="Common\AdminControllerBase.cs" />
     <Compile Include="Common\AdminCookieContext.cs" />
     <Compile Include="Common\AdminUserContext.cs" />
-    <Compile Include="Common\Class1.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -440,8 +439,8 @@
     <Content Include="Assets\css\style.css" />
     <Content Include="Assets\css\style_blue.css" />
     <Content Include="Assets\css\style_brown.css" />
+    <Content Include="Assets\css\style_default_light.css" />
     <Content Include="Assets\css\style_default.css" />
-    <Content Include="Assets\css\style_light.css" />
     <Content Include="Assets\css\style_purple.css" />
     <Content Include="Assets\css\style_responsive.css" />
     <Content Include="Assets\data-tables\DT_bootstrap.css" />
