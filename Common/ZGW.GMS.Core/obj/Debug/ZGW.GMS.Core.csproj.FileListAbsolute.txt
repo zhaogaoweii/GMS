@@ -338,7 +338,6 @@ E:\Myself\个人项目\GMS\Common\ZGW.GMS.Core\bin\Debug\NPOI.xml
 E:\Myself\个人项目\GMS\Common\ZGW.GMS.Core\bin\Debug\NPOI.OOXML.xml
 E:\Myself\个人项目\GMS\Common\ZGW.GMS.Core\bin\Debug\NPOI.OpenXml4Net.xml
 E:\Myself\个人项目\GMS\Common\ZGW.GMS.Core\bin\Debug\System.Web.Optimization.xml
-E:\Myself\个人项目\GMS\Common\ZGW.GMS.Core\obj\Debug\ZGW.GMS.Core.csprojResolveAssemblyReference.cache
 E:\Myself\个人项目\GMS\Common\ZGW.GMS.Core\obj\Debug\ZGW.GMS.Core.dll
 E:\Myself\个人项目\GMS\Common\ZGW.GMS.Core\obj\Debug\ZGW.GMS.Core.pdb
 E:\框架\GMS\Common\ZGW.GMS.Core\obj\Debug\ZGW.GMS.Core.csprojResolveAssemblyReference.cache

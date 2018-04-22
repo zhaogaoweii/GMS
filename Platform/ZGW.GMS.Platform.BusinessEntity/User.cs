@@ -11,8 +11,12 @@ namespace ZGW.GMS.Platform.BusinessEntity
     /// <summary>
     /// 登录系统用户表
     /// </summary>
-    public class User:ModelBase
+    public class User : ModelBase
     {
+        public User() 
+        {
+            Roles = new List<Role>();
+        }
         /// <summary>
         /// 登录名
         /// </summary>

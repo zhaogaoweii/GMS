@@ -33,6 +33,5 @@ E:\框架\GMS\Crm\ZGW.GMS.Crm.BusinessEntity\obj\Debug\ZGW.GMS.Crm.BusinessEntit
 E:\框架\GMS\Crm\ZGW.GMS.Crm.BusinessEntity\obj\Debug\ZGW.GMS.Crm.BusinessEntity.pdb
 E:\Myself\个人项目\GMS\Crm\ZGW.GMS.Crm.BusinessEntity\bin\Debug\ZGW.GMS.Crm.BusinessEntity.dll
 E:\Myself\个人项目\GMS\Crm\ZGW.GMS.Crm.BusinessEntity\bin\Debug\ZGW.GMS.Crm.BusinessEntity.pdb
-E:\Myself\个人项目\GMS\Crm\ZGW.GMS.Crm.BusinessEntity\obj\Debug\ZGW.GMS.Crm.BusinessEntity.csprojResolveAssemblyReference.cache
 E:\Myself\个人项目\GMS\Crm\ZGW.GMS.Crm.BusinessEntity\obj\Debug\ZGW.GMS.Crm.BusinessEntity.dll
 E:\Myself\个人项目\GMS\Crm\ZGW.GMS.Crm.BusinessEntity\obj\Debug\ZGW.GMS.Crm.BusinessEntity.pdb

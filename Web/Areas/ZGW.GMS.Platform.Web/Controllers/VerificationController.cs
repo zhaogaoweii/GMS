@@ -66,7 +66,7 @@ namespace ZGW.GMS.Platform.Web.Controllers
                 FormsAuthentication.SetAuthCookie(model.LoginName, true);
                 //这个地方赋值权限
                 User user = _iMembershipService.GetModelByStrWhere(" and LoginName='" + model.LoginName + "' ");
-
+                
                 Session["user"] = user;
                 //检查Application
                 Session["userName"] = user.LoginName;

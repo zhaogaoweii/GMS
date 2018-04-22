@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -87,6 +88,17 @@ namespace ZGW.GMS.Platform.Repository.Implement
             }
             else
             {
+                if (model.RoleIds.Count != 0)
+                {
+                    foreach (var item in model.RoleIds)
+                    {
+                        UserRole ur = new UserRole();
+                        ur.RoleID = item;
+                        ur.UserID = Convert.ToInt32(obj);
+                        ur.CreateTime = DateTime.Now;
+                        AddUserRole(ur);
+                    }
+                }
                 return Convert.ToInt32(obj);
             }
         }
@@ -600,6 +612,64 @@ namespace ZGW.GMS.Platform.Repository.Implement
                 }
             }
             return list;
+        }
+        /// <summary>
+        ///  根据用户id获取角色
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public List<Role> GetListByUserID(string userId)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat(@"
+select TR.ID,tr.Name,tr.BusinessPermissionString,tr.CreateTime,tr.Info from tb_UserRole TUR
+inner join tb_User TU on TUR.UserID=tu.ID and TU.ID={0}
+inner join tb_Role TR on tur.RoleID=tr.ID
+", userId);
+            DataTable dt = SQLHelper.GetDataTable(sb.ToString());
+            List<Role> list = new List<Role>();
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+
+                    Role model = DataRowToModelRole(dr);
+                    list.Add(model);
+                }
+            }
+            return list;
+
+        }
+
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public int AddUserRole(UserRole model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into tb_UserRole(");
+            strSql.Append("UserID,RoleID,CreateTime)");
+            strSql.Append(" values (");
+            strSql.Append("@UserID,@RoleID,@CreateTime)");
+            strSql.Append(";select @@IDENTITY");
+            SqlParameter[] parameters = {
+					new SqlParameter("@UserID", SqlDbType.NVarChar,50),
+					new SqlParameter("@RoleID", SqlDbType.NVarChar,100),
+					new SqlParameter("@CreateTime", SqlDbType.DateTime)
+                                        };
+
+            parameters[0].Value = model.UserID;
+            parameters[1].Value = model.RoleID;
+            parameters[2].Value = model.CreateTime;
+            object obj = SQLHelper.GetSingle(strSql.ToString(), parameters);
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
         }
         #endregion
         #region  ExtensionMethod

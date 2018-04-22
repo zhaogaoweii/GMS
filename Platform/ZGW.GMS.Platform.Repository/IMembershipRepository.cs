@@ -63,7 +63,13 @@ namespace ZGW.GMS.Platform.Repository
         ///角色 分页获取数据
         /// </summary>
         /// <returns></returns>
-        List<Role> GetListByPageToList(string strWhere, string orderby, int startIndex, int endIndex,bool isAll=false);
+        List<Role> GetListByPageToList(string strWhere, string orderby, int startIndex, int endIndex, bool isAll = false);
+        /// <summary>
+        ///  根据用户id获取角色
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        List<Role> GetListByUserID(string userId);
         #endregion
     }
 }

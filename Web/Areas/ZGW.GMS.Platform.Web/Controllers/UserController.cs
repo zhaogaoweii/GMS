@@ -38,7 +38,11 @@ namespace ZGW.GMS.Platform.Web.Controllers
             {
                 model = _iMembershipService.GetModelByStrWhere(string.Format(" and ID={0} ", id));
             }
-
+            else
+            {
+                model.Password = "888888";
+            }
+            RoleList(model);
             return View(model);
         }
         [HttpPost]
@@ -73,6 +77,13 @@ namespace ZGW.GMS.Platform.Web.Controllers
             }
             return this.RefreshParent(result);
         }
-
+        /// <summary>
+        /// 获取所有的角色
+        /// </summary>
+        public void RoleList(User model)
+        {
+            List<Role> list = _iMembershipService.GetListByPageToList(string.Empty, string.Empty, 0, 0, true);
+            this.ViewBag.RoleIds = new SelectList(list, "ID", "Name", string.Join(",", model.Roles.Select(m => m.ID)));
+        }
     }
 }

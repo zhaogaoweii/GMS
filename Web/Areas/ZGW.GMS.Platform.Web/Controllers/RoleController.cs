@@ -37,7 +37,7 @@ namespace ZGW.GMS.Platform.Web.Controllers
             {
                 model = _iMembershipService.GetModelRole(id);
             }
-            GetBusinessPermissionList();
+            GetBusinessPermissionList(model);
             return View(model);
         }
         [HttpPost]
@@ -80,11 +80,13 @@ namespace ZGW.GMS.Platform.Web.Controllers
             }
             return this.RefreshParent(result);
         }
-
-        public void GetBusinessPermissionList()
+        /// <summary>
+        /// 获取所有的权限
+        /// </summary>
+        public void GetBusinessPermissionList(Role model)
         {
             var businessPermissionList = EnumHelper.GetItemValueList<EnumBusinessPermission>();
-            this.ViewBag.BusinessPermissionList = new SelectList(businessPermissionList, "Key", "Value");
+            this.ViewBag.BusinessPermissionList = new SelectList(businessPermissionList, "Key", "Value",model.BusinessPermissionString);
         }
     }
 }

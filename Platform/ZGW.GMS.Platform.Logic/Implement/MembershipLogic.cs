@@ -54,7 +54,9 @@ namespace ZGW.GMS.Platform.Logic.Implement
         /// <returns></returns>
         public User GetModelByStrWhere(string strWhere)
         {
-            return _iMembershipRepository.GetModelByStrWhere(strWhere);
+            User user=_iMembershipRepository.GetModelByStrWhere(strWhere);
+            user.Roles = _iMembershipRepository.GetListByUserID(user.ID.ToString());
+            return user;
         }
 
 

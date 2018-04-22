@@ -40,8 +40,8 @@
                 <div class="control-group">
                     <label class="control-label"><span class="required">*</span>密码：</label>
                     <div class="controls">
-                        @Html.TextBoxFor(m => m.Password, new { @class = "m-wrap small" })
-                        <span class="help-inline">默认密码6个1</span>
+                        @Html.TextBoxFor(m => m.Password, new { @class = "m-wrap small", @type = "password" })
+                        <span class="help-inline">默认密码6个8</span>
                     </div>
                 </div>
             }
