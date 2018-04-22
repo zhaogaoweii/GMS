@@ -130,10 +130,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\AdminCacheContext.cs" />
     <Compile Include="Common\AdminControllerBase.cs" />
+<<<<<<< HEAD
     <Compile Include="Common\AdminCookieContext.cs" />
     <Compile Include="Common\AdminUserContext.cs" />
+=======
+>>>>>>> 4b1e123844a49c7070fd37b78ea7305ba50ba985
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1595,6 +1597,10 @@
     <ProjectReference Include="..\Common\ZGW.GMS.Core\ZGW.GMS.Core.csproj">
       <Project>{4c9fd44b-7991-43a7-b08a-6ea6b98c1509}</Project>
       <Name>ZGW.GMS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform\ZGW.GMS.Platform.BusinessEntity\ZGW.GMS.Platform.BusinessEntity.csproj">
+      <Project>{51b06b2e-b595-49d7-8731-1f1c2b86f09c}</Project>
+      <Name>ZGW.GMS.Platform.BusinessEntity</Name>
     </ProjectReference>
     <ProjectReference Include="Areas\ZGW.GMS.Crm.Web\ZGW.GMS.Crm.Web.csproj">
       <Project>{b9d7d444-d1ec-47ae-adf1-8db5e34f2077}</Project>
