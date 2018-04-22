@@ -131,11 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\AdminControllerBase.cs" />
-<<<<<<< HEAD
-    <Compile Include="Common\AdminCookieContext.cs" />
-    <Compile Include="Common\AdminUserContext.cs" />
-=======
->>>>>>> 4b1e123844a49c7070fd37b78ea7305ba50ba985
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
