@@ -1,0 +1,35 @@
+﻿@using ZGW.GMS.Core.Web
+@{
+    ViewBag.Title = "SuccessScipt";
+    Layout = null;
+}
+<!DOCTYPE html>
+<head>
+    <title>中国国际技术智力合作公司OMS系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="none" name="Robots" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" href="@Url.StaticFile("/assets/css/common.css")" />
+    <script src="@Url.StaticFile("/assets/js/jquery-1.8.3.min.js")"></script>
+    <script type="text/javascript" src="@Url.StaticFile("/assets/js/common.js")"></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    var result = "@ViewData["info"]";
+    if (result.indexOf("Edit") > 0) {
+        window.top.tb_remove(result);
+    } else {
+        if (result.split('|')[0] == "1") {
+            $(this).showTip("4", "提示", result.split('|')[1], function () {
+                window.location.href = "@Url.Content("~/")" + result.split('|')[2] + "";
+            })
+        }
+        else {
+            $(this).parent.showTip("3", "提示", result.split('|')[1], function () {
+                window.location.href = "@Url.Content("~/")" + result.split('|')[2] + "";
+
+            })
+        }
+    }
+</script>

@@ -11,6 +11,7 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
+    <link rel="stylesheet" type="text/css" href="@Url.StaticFile("/assets/css/common.css")" />
 	<link href="@Url.StaticFile("/assets/bootstrap/css/bootstrap.min.css")" rel="stylesheet" />
 	<link href="@Url.StaticFile("/assets/css/metro.css")" rel="stylesheet" />
 	<link href="@Url.StaticFile("/assets/bootstrap/css/bootstrap-responsive.min.css")" rel="stylesheet" />
@@ -26,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="@Url.StaticFile("/assets/jquery-ui/jquery-ui-1.10.1.custom.min.css")" />
     <link rel="stylesheet" type="text/css" href="@Url.StaticFile("/content/styles/admin.main.css")" />
     <link rel="stylesheet" type="text/css" href="@Url.StaticFile("/content/styles/jquery.thickbox.css")" />
+    
     @RenderSection("PageSpecificStyleSheetIncludes", required: false)
 </head>
 <!-- END HEAD -->
@@ -62,7 +64,7 @@
 				<div class="row-fluid">
 					<div class="span12" id="navigation">
 						<!-- BEGIN STYLE CUSTOMIZER -->
-						@Html.Partial("_Theme")
+						@*@Html.Partial("_Theme")*@
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->			
 						<h3 class="page-title">
@@ -111,6 +113,7 @@
 	<script src="@Url.StaticFile("/assets/js/excanvas.js")"></script>
 	<script src="@Url.StaticFile("/assets/js/respond.js")"></script>
 	<![endif]-->	
+    <script type="text/javascript" src="@Url.StaticFile("/assets/js/common.js")"></script>
 	<script type="text/javascript" src="@Url.StaticFile("/assets/uniform/jquery.uniform.min.js")"></script>
 	<script type="text/javascript" src="@Url.StaticFile("/assets/data-tables/jquery.dataTables.js")"></script>
 	<script type="text/javascript" src="@Url.StaticFile("/assets/data-tables/DT_bootstrap.js")"></script>

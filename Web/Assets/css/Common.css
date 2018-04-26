@@ -1,0 +1,123 @@
+﻿
+.div_showTip
+{
+	background:#FFF url(../img/common/bg_01.jpg) repeat-x;
+	width:350px;
+	padding-bottom:20px;
+	position:absolute;
+	z-index:500;
+	left:0px;
+	top:0px;
+	border:1px solid #009EDB;border-top:0px;
+}
+.div_showTip_01
+{	
+	height:30px;
+}
+.div_showTip_title
+{
+	float:left;
+	width:150px;
+	font-weight:bold;
+	color:#045AA7;
+	padding-left:30px;
+	padding-top:11px;	
+}
+.div_showTip_close
+{
+	background:url(../img/common/close_bg_01.gif) no-repeat;
+	height:19px;
+	width:19px;
+	cursor:pointer;
+	float:right;
+	margin-right:5px;
+	margin-top:7px;
+}
+.div_showTip_close_hover
+{
+	background:url(../img/common/close_bg_02.gif) no-repeat;
+	height:19px;
+	width:19px;
+	cursor:pointer;
+	float:right;
+	margin-right:5px;
+	margin-top:7px;
+}
+.div_showTip_info
+{
+	background:url(../img/common/info_bg_01.gif) no-repeat;
+	background-position:10px center;		
+	padding:15px 10px 10px 60px;
+	line-height:20px;
+	color:#565656;
+	font-size:13px;
+	margin-top:10px;
+	word-break:break-all;
+}
+.div_showTip_wraning
+{
+	background:url(../img/common/wraning_bg.gif) no-repeat;
+	background-position:10px center;		
+	padding:15px 10px 10px 60px;
+	line-height:20px;
+	color:#565656;
+	font-size:13px;
+	margin-top:10px;
+	word-break:break-all;
+}
+.div_showTip_error
+{
+	background:url(../img/common/error_bg_01.gif) no-repeat;
+	background-position:10px center;		
+	padding:15px 10px 10px 60px;
+	line-height:20px;
+	color:#565656;
+	font-size:13px;
+	margin-top:10px;
+	word-break:break-all;
+}
+.div_showTip_success
+{
+	background:url(../img/common/success_bg_01.gif) no-repeat;
+	background-position:10px center;		
+	padding:15px 10px 10px 60px;
+	line-height:20px;
+	color:#565656;
+	font-size:13px;
+	margin-top:10px;
+	word-break:break-all;	
+}
+.div_showTip_confirm
+{
+	background:url(../img/common/confirm_bg_01.gif) no-repeat;
+	background-position:10px center;		
+	padding:15px 10px 10px 60px;
+	line-height:20px;
+	color:#565656;
+	font-size:13px;
+	margin-top:10px;
+	word-break:break-all;
+}
+.div_showTip_bottom
+{
+	text-align:center;
+	height:30px;
+	margin-top:25px;
+}
+.btn_ok
+{
+	background:url(../img/common/btn_ok_bg.gif);
+	width:70px;
+	height:25px;
+	cursor:pointer;
+	border-style:none;
+}
+.bnt_cancel
+{
+	background:url(../img/common/cancel_btn_bg.gif);
+	width:70px;
+	height:25px;
+	cursor:pointer;
+	border-style:none;
+	margin-left:15px;	
+}

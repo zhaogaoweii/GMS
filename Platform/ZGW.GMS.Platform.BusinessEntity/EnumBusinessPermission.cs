@@ -44,7 +44,7 @@ namespace ZGW.GMS.Platform.BusinessEntity
         CrmManage_Customer = 401,
 
         [EnumTitle("个人客户")]
-        CrmManage_Project = 402,
+        CrmManage_Person = 402,
 
         //[EnumTitle("CRM查看统计信息")]
         //CrmManage_Analysis = 304,

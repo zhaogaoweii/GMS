@@ -85,12 +85,40 @@ $("#checkall").click(function () {
 });
 
 $("#delete").click(function () {
-    var message = "你确定要删除勾选的记录吗?";
-    if ($(this).attr("message"))
-        message = $(this).attr("message") + "，" + message;
-    if (confirm(message))
-        $("#mainForm").submit();
+    if ($("input:checkbox[name='ids']:checked").length > 0) {
+        var opType = $(this).attr("opType");
+        var arrs = [];
+        $("input:checkbox[name='ids']:checked").each(function () {
+            arrs.push($(this).val());
+        });
+        var ids = arrs.join(',');
+        $(this).showTip("5", "提示", "你确定要删除勾选的记录吗?", function () {
+            $.ajax({
+                type: 'POST',
+                url: 'Del',
+                data: { ids: ids, opType: opType },
+                async: false,
+                success: function (data) {
+                    if (data.success == "no") {
+                        $(this).showTip("1", "提示", "" + data.info + "", function () { });
+                    } else {
+                        $(this).showTip("4", "提示", "" + data.info + "", function () {
+                            location.reload(true);
+                        });
+
+                    }
+                },
+                error: function (xhr, textStatus, error) {
+
+                }
+            });
+            //$("#mainForm").submit();
+        }, true);
+    } else {
+        $(this).showTip("1", "提示", "请选择要删除的数据！", function () { }, true);
+    }
 });
+
 
 
 

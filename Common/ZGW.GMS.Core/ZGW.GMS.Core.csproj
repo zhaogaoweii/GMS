@@ -266,6 +266,7 @@
     <Compile Include="Utility\FileHelper.cs" />
     <Compile Include="Utility\ImportResultEntity.cs" />
     <Compile Include="Utility\Int32Helper.cs" />
+    <Compile Include="Utility\JsScriptHelper.cs" />
     <Compile Include="Utility\SerializationHelper.cs" />
     <Compile Include="Utility\StringHelper.cs" />
     <Compile Include="Utility\SystemHelper.cs" />

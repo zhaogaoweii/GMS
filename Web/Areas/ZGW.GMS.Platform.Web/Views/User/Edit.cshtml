@@ -30,7 +30,7 @@
                     }
                     else
                     {
-                        @Model.LoginName
+                        @Html.TextBoxFor(m => m.LoginName, new { @class = "m-wrap small",@disabled="disabled" })
                     }
                 </div>
             </div>

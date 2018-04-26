@@ -21,6 +21,7 @@
                     <input type="text" placeholder="Search..." />
                     <input type="button" class="submit" value=" " />
                 </div>
+               
             </form>
             <!-- END RESPONSIVE QUICK SEARCH FORM -->
         </li>
@@ -40,7 +41,7 @@
             }
             
             <li class="@(hasSub ? "has-sub" : string.Empty)">
-                <a href="@(hasSub ? "javascript:;" : group.Url)" title="@group.Info">
+                <a href="javascript:; " title="@group.Info" >
                     <i class="@group.Icon"></i>
                     <span class="title">@group.Name</span>
                     @if (hasSub)
@@ -53,7 +54,7 @@
                     <ul class="sub">
                         @foreach (var menu in menus)
                         {
-                            <li><a href="@menu.Url" title="@menu.Info">@menu.Name</a></li>
+                            <li><a href="javascript:; " title="@menu.Info" onclick="ToModule('@menu.Url')">@menu.Name</a></li>
                         }
                     </ul>
                 }

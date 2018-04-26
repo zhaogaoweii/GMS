@@ -432,6 +432,7 @@
     <Content Include="Assets\clockface\CHANGELOG.txt" />
     <Content Include="Assets\clockface\css\clockface.css" />
     <Content Include="Assets\clockface\js\clockface.js" />
+    <Content Include="Assets\css\Common.css" />
     <Content Include="Assets\css\metro.css" />
     <Content Include="Assets\css\style.css" />
     <Content Include="Assets\css\style_blue.css" />
@@ -640,6 +641,16 @@
     <Content Include="Assets\img\avatar2.jpg" />
     <Content Include="Assets\img\avatar3.jpg" />
     <Content Include="Assets\img\avatar3_small.jpg" />
+    <Content Include="Assets\img\common\bg_01.jpg" />
+    <Content Include="Assets\img\common\btn_ok_bg.gif" />
+    <Content Include="Assets\img\common\cancel_btn_bg.gif" />
+    <Content Include="Assets\img\common\close_bg_01.gif" />
+    <Content Include="Assets\img\common\close_bg_02.gif" />
+    <Content Include="Assets\img\common\confirm_bg_01.gif" />
+    <Content Include="Assets\img\common\error_bg_01.gif" />
+    <Content Include="Assets\img\common\info_bg_01.gif" />
+    <Content Include="Assets\img\common\success_bg_01.gif" />
+    <Content Include="Assets\img\common\wraning_bg.gif" />
     <Content Include="Assets\img\dashboard\test.jpg" />
     <Content Include="Assets\img\dashboard\test1.jpg" />
     <Content Include="Assets\img\dashboard\test2.jpg" />
@@ -982,6 +993,7 @@
     <Content Include="Assets\jqvmap\samples\usa.html" />
     <Content Include="Assets\jqvmap\samples\world.html" />
     <Content Include="Assets\js\app.js" />
+    <Content Include="Assets\js\Common.js" />
     <Content Include="Assets\js\demo.gmaps.js" />
     <Content Include="Assets\js\excanvas.js" />
     <Content Include="Assets\js\gmaps.js" />
@@ -1570,6 +1582,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\Shared\_Theme.cshtml" />
+    <Content Include="Views\Shared\SuccessScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\" />

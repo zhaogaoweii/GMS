@@ -65,7 +65,8 @@ namespace ZGW.GMS.Crm.Web.Controllers
             {
                 result = "成功";
             }
-            return this.RefreshParent(result);
+            ViewData["info"] = "" + (count > 0 ? "1" : "0") + "|" + result + "|Customer/CompanyIndex";
+            return View("SuccessScript");
         }
         /// <summary>
         /// 获取一般用户列表
@@ -109,40 +110,31 @@ namespace ZGW.GMS.Crm.Web.Controllers
             {
                 result = "成功";
             }
-            return this.RefreshParent(result);
+            ViewData["info"] = "" + (count > 0 ? "1" : "0") + "|" + result + "|ElectricityUserIndex|Edit";
+            return View("SuccessScript");
         }
         [HttpPost]
-        public ActionResult DelCompany(string ids)
+        public JsonResult Del(string ids, string opType = "")
         {
             string result = "失败";
-            bool isOk = _iCrmService.DelCompany(ids);
+            bool isOk = false;
+            switch (opType)
+            {
+                case "person":
+                    isOk = _iCrmService.DelPersonuser(ids);
+                    break;
+                case "company":
+                    isOk = _iCrmService.DelCompany(ids);
+                    break;
+                default:
+                    break;
+            }
             if (isOk)
             {
                 result = "成功";
             }
-            return this.RefreshParent(result);
+            return Json(new { success = "" + (isOk ? "ok" : "no") + "", info = "" + result.ToString() + "" });
         }
 
-        [HttpPost]
-        public ActionResult DelPerson(string ids)
-        {
-
-            string result = "失败";
-            bool isOk = _iCrmService.DelPersonuser(ids);
-            if (isOk)
-            {
-                result = "成功";
-            }
-            return this.RefreshParent(result);
-        }
-        /// <summary>
-        /// 当弹出DIV弹窗时，需要刷新浏览器整个页面
-        /// </summary>
-        /// <returns></returns>
-        public ContentResult RefreshParent(string alert = null)
-        {
-            var script = string.Format("<script>{0}; parent.location.reload(1)</script>", string.IsNullOrEmpty(alert) ? string.Empty : "alert('" + alert + "')");
-            return this.Content(script);
-        }
     }
 }

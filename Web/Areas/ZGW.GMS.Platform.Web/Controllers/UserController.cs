@@ -53,21 +53,18 @@ namespace ZGW.GMS.Platform.Web.Controllers
             if (count > 0)
             {
                 result = "成功";
-
             }
-            return this.RefreshParent(result);
+            ViewData["info"] = "" + (count > 0 ? "1" : "0") + "|" + result + "|Index|Edit";
+            return View("SuccessScript");
         }
+
         /// <summary>
-        /// 当弹出DIV弹窗时，需要刷新浏览器整个页面
+        /// 删除
         /// </summary>
+        /// <param name="ids"></param>
         /// <returns></returns>
-        public ContentResult RefreshParent(string alert = null)
-        {
-            var script = string.Format("<script>{0}; parent.location.reload(1)</script>", string.IsNullOrEmpty(alert) ? string.Empty : "alert('" + alert + "')");
-            return this.Content(script);
-        }
         [HttpPost]
-        public ActionResult Del(string ids)
+        public JsonResult Del(string ids, string opType = "")
         {
             bool isOk = _iMembershipService.DeleteList(ids);
             string result = "失败";
@@ -75,7 +72,8 @@ namespace ZGW.GMS.Platform.Web.Controllers
             {
                 result = "成功";
             }
-            return this.RefreshParent(result);
+            return Json(new { success = "" + (isOk ? "ok" : "no") + "", info = "" + result.ToString() + "" });
+
         }
         /// <summary>
         /// 获取所有的角色

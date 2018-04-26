@@ -10,10 +10,10 @@
       </AdminMenuArray>
     </AdminMenuGroup>
 
-    <AdminMenuGroup name="CRM管理" icon="icon-phone-sign" permission="CRM_Manage">
+    <AdminMenuGroup name="CRM管理" icon="icon-phone-sign" permission="Crm_Manage">
       <AdminMenuArray>
-        <AdminMenu name="公司客户" url="Customer/CompanyIndex" info="添加修改删除来访来电" permission="CrmManage_VisitRecord" />
-        <AdminMenu name="一般客户" url="Customer/ElectricityUserIndex" info="添加修改删除客户" permission="CrmManage_Customer" />
+        <AdminMenu name="公司客户" url="Customer/CompanyIndex" info="添加修改删除来访来电" permission="CrmManage_Customer" />
+        <AdminMenu name="一般客户" url="Customer/ElectricityUserIndex" info="添加修改删除客户" permission="CrmManage_Person" />
       </AdminMenuArray>
     </AdminMenuGroup>
 
